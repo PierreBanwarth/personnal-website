@@ -3,7 +3,6 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: 'export',
   basePath: '/personnal-website',
-  assetPrefix: '/personnal-website/',
   turbopack: {
     rules: {
       "*.css": {

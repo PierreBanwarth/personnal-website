@@ -138,7 +138,7 @@ export const cyanotypeProjects: Project[] = [
         slug: 'cyanotypes',
         type: 'cyanotype',
         description: 'A series of cyanotype prints created from Game Boy Camera images, exploring the transformation from digital to physical medium.',
-        image: '/images/cyanotypes/cyanotype-01.png',
+        image: '/images/cyanotypes/6P7J95Nx.jpg',
         works: cyanotypeWorks.map(w => w.id),
     },
 ];
