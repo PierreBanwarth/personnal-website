@@ -1,0 +1,60 @@
+'use client';
+
+import MediaDisplay from '@/components/MediaDisplay';
+import { liveWorks } from '@/lib/data';
+import Link from 'next/link';
+import { useT } from '@/lib/useT';
+
+export default function LiveImagesPage() {
+    const t = useT();
+    return (
+        <div className="bg-warm-white min-h-screen">
+            {/* Header */}
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+                <h1 className="text-4xl md:text-5xl font-bold text-charcoal mb-6">{t('liveVideos.title')}</h1>
+                <p className="text-lg text-charcoal/70 max-w-3xl">
+                    {t('liveVideos.description')}
+                </p>
+            </section>
+
+            {/* Gallery Grid */}
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {liveWorks.map((work) => (
+                        <div key={work.id} className="group">
+                            {(work.video || work.image) && (
+                                <div className="relative bg-charcoal/5 aspect-square mb-6 overflow-hidden rounded">
+                                    <MediaDisplay
+                                        video={work.video}
+                                        image={work.image}
+                                        alt={work.title}
+                                        className="group-hover:opacity-90 transition-opacity duration-300"
+                                    />
+                                </div>
+                            )}
+                            <h2 className="text-xl font-semibold text-charcoal mb-2">{work.title}</h2>
+                            {work.date && <p className="text-sm text-charcoal/60 font-mono mb-2">{work.date}</p>}
+                            {work.description && <p className="text-sm text-charcoal/70">{work.description}</p>}
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            {/* Call to action */}
+            <section className="bg-charcoal text-warm-white py-16 md:py-24">
+                <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 className="text-2xl font-bold mb-4">{t('liveVideos.interested')}</h2>
+                    <p className="text-warm-white/80 mb-8">
+                        {t('liveVideos.interestedDesc')}
+                    </p>
+                    <Link
+                        href="/contact"
+                        className="inline-block px-6 py-3 bg-warm-white text-charcoal hover:bg-warm-white/90 transition-colors font-medium"
+                    >
+                        {t('liveVideos.getInTouch')}
+                    </Link>
+                </div>
+            </section>
+        </div>
+    );
+}
