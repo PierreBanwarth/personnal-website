@@ -11,14 +11,9 @@ export default function LiveImagesPage() {
         <div className="bg-warm-white min-h-screen">
             {/* Header */}
             <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-                <div className="space-y-4 mb-16">
-                    <p className="text-xs uppercase tracking-widest text-charcoal/60 font-semibold">
-                        Série vidéographique
-                    </p>
-                    <h1 className="text-6xl md:text-7xl font-bold text-charcoal leading-tight">
-                        Image en mouvement
-                    </h1>
-                </div>
+                <h1 className="text-6xl md:text-7xl font-bold text-charcoal leading-tight mb-16">
+                    Image en mouvement
+                </h1>
             </section>
 
             {/* Editorial Text Section */}
