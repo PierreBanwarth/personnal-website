@@ -90,6 +90,7 @@ export const translations = {
       cyanotypesDesc2: 'The cyanotype process emphasizes tonality, contrast, and the materiality of paper. Each print is unique, shaped by the characteristics of the paper, the chemistry involved, and the hand of the printer.',
       collaboration: 'Collaboration',
       collaborationDesc: 'The cyanotype series is created in close collaboration with a printmaker. This partnership reflects different roles and expertise: I provide the original photograph and visual direction; my collaborator handles the technical realization of the print, working with chemistry, paper, light, and time.',
+      notHierarchical: 'This is not a hierarchical relationship. Both the photograph and the print are essential to the final work. The printer brings their own knowledge and decisions to each print, making each one an individual object.',
     },
     // Cyanotypes Page
     cyanotypes: {
@@ -276,6 +277,7 @@ export const translations = {
       cyanotypesDesc2: 'Le processus de la cyanotypie met l\'accent sur la tonalité, le contraste et la matérialité du papier. Chaque impression est unique, façonnée par les caractéristiques du papier, la chimie impliquée et la main de l\'imprimeur.',
       collaboration: 'Collaboration',
       collaborationDesc: 'La série de cyanotypes est créée en étroite collaboration avec un imprimeur. Ce partenariat reflète des rôles et des expertises différents : je fournis la photographie originale et la direction visuelle ; mon collaborateur gère la réalisation technique de l\'impression, travaillant avec la chimie, le papier, la lumière et le temps.',
+      notHierarchical: 'Ce n\'est pas une relation hiérarchique. À la fois la photographie et le tirage sont essentiels à l\'œuvre finale. L\'imprimeur apporte ses propres connaissances et décisions à chaque tirage, faisant de chacun un objet individuel.',
     },
     // Cyanotypes Page
     cyanotypes: {

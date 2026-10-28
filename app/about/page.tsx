@@ -65,7 +65,7 @@ export default function AboutPage() {
                         {t('about.collaborationDesc')}
                     </p>
                     <p className="text-charcoal/80 leading-relaxed">
-                        This is not a hierarchical relationship. Both the photograph and the print are essential to the final work. The printer brings their own knowledge and decisions to each print, making each one an individual object.
+                        {t('about.notHierarchical')}
                     </p>
                 </div>
 
