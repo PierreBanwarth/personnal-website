@@ -1,7 +1,7 @@
 'use client';
 
 import MediaDisplay from '@/components/MediaDisplay';
-import { liveWorks } from '@/lib/data';
+import { liveWorks, photoWorks } from '@/lib/data';
 import Link from 'next/link';
 import { useT } from '@/lib/useT';
 
@@ -21,6 +21,25 @@ export default function Home() {
           <p className="text-lg text-charcoal/80 mb-12 leading-relaxed max-w-2xl">
             {t('home.description')}
           </p>
+        </div>
+      </section>
+
+      {/* Photo Gallery Section */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+          {photoWorks.map((work) => (
+            <div key={work.id} className="group">
+              {work.image && (
+                <div className="relative bg-charcoal/5 aspect-square overflow-hidden">
+                  <MediaDisplay
+                    image={work.image}
+                    alt={work.title}
+                    className="group-hover:opacity-80 transition-opacity w-full h-full object-cover"
+                  />
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </section>
 
