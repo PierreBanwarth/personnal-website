@@ -142,6 +142,14 @@ export const translations = {
       sendMessage: 'Send Message',
       messageSent: 'Message sent! Thank you for getting in touch.',
       messageReceivedDesc: 'I have received your inquiry and will get back to you soon.',
+      followTitle: 'Follow the Work',
+      followText: 'For updates and new photographs, follow on Instagram or check back here.',
+    },
+    // 404 Not Found
+    notFound: {
+      title: 'Page Not Found',
+      description: 'The page you\'re looking for doesn\'t exist or has been moved.',
+      returnHome: 'Return Home',
     },
     // Equipment Page
     equipment: {
@@ -333,6 +341,14 @@ export const translations = {
       sendMessage: 'Envoyer',
       messageSent: 'Message envoyé ! Merci de nous avoir contacté.',
       messageReceivedDesc: 'J\'ai bien reçu votre demande et je vous recontacterai bientôt.',
+      followTitle: 'Suivre le travail',
+      followText: 'Pour les mises à jour et les nouvelles photographies, suivez sur Instagram ou revenez consulter ici.',
+    },
+    // 404 Not Found
+    notFound: {
+      title: 'Page non trouvée',
+      description: 'La page que vous recherchez n\'existe pas ou a été déplacée.',
+      returnHome: 'Retourner à l\'accueil',
     },
     // Equipment Page
     equipment: {

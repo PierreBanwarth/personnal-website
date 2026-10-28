@@ -202,9 +202,9 @@ export default function ContactPage() {
             {/* Additional Info Section */}
             <section className="bg-charcoal text-warm-white py-16 md:py-24">
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-2xl font-bold mb-4">Follow the Work</h2>
+                    <h2 className="text-2xl font-bold mb-4">{t('contact.followTitle')}</h2>
                     <p className="text-warm-white/80 mb-6">
-                        For updates and new photographs, follow on Instagram or check back here.
+                        {t('contact.followText')}
                     </p>
                     <a
                         href="https://instagram.com/pierre_banwarth"
