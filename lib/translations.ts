@@ -31,11 +31,19 @@ export const translations = {
     },
     // Live Videos Page
     liveVideos: {
-      title: 'Live Videos',
+      title: 'Live Images',
       description: 'A collection of videos capturing moments from concert performances and live events. Each video is documentation taken with the Game Boy Camera, exploring composition, light, and movement through a constrained medium.',
       interested: 'Interested in using these videos?',
       interestedDesc: 'For licensing, prints, or collaborations, get in touch.',
       getInTouch: 'Get in Touch →',
+    },
+    // Live Images Artistic Text
+    liveImages: {
+      title: 'Image in Motion',
+      artisticText1: 'A single image does not always immediately reveal what it contains. With the Game Boy Camera, forms blur together, faces mingle with instruments, silhouettes fragment into a pixel grid. Certain scenes remain ambiguous, suspended between abstraction and figuration.',
+      artisticText2: 'The shift to moving image transforms this perception. From one image to the next, something clarifies. A gesture, a movement, a change of posture illuminates what, moments before, remained uncertain. The viewer gradually reconstructs the scene, searching for reference points, recognizing presences.',
+      artisticText3: 'Motion does not simply extend photography—it sometimes reveals its meaning. Where the still image suspends an instant, the sequence reveals continuity. It gives the eye time to understand, or sometimes to continue questioning.',
+      artisticText4: 'These videos thus propose another way of inhabiting images: not merely contemplating them, but traversing them through time.',
     },
     // About Page
     about: {
@@ -184,6 +192,14 @@ export const translations = {
       interested: 'Intéressé par l\'utilisation de ces vidéos ?',
       interestedDesc: 'Pour les licences, les impressions ou les collaborations, veuillez nous contacter.',
       getInTouch: 'Nous contacter →',
+    },
+    // Live Images Artistic Text
+    liveImages: {
+      title: 'Image en mouvement',
+      artisticText1: 'Une image isolée ne livre pas toujours immédiatement ce qu\'elle contient. Avec la Game Boy Camera, les formes se confondent, les visages se mêlent aux instruments, les silhouettes se fragmentent dans une trame de pixels. Certaines scènes demeurent ambiguës, à la frontière entre abstraction et figuration.',
+      artisticText2: 'Le passage à l\'image en mouvement transforme cette perception. D\'une image à l\'autre, quelque chose se précise. Un geste, un déplacement, un changement de posture viennent éclairer ce qui, quelques instants plus tôt, restait incertain. Le regard recompose progressivement la scène, cherche des repères, reconnaît des présences.',
+      artisticText3: 'Le mouvement ne vient pas simplement prolonger la photographie : il en révèle parfois le sens. Là où l\'image fixe suspend un instant, la séquence fait apparaître une continuité. Elle laisse au regard le temps de comprendre, ou parfois de continuer à hésiter.',
+      artisticText4: 'Ces vidéos proposent ainsi une autre manière d\'habiter les images : non plus seulement les contempler, mais les traverser dans le temps.',
     },
     // About Page
     about: {
