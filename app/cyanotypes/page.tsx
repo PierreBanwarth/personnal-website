@@ -27,18 +27,31 @@ export default function CyanotypesPage() {
                 </p>
             </section>
 
-            {/* Featured Image Section */}
-            {cyanotypeWorks.length > 0 && cyanotypeWorks[2]?.image && (
-                <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-                    <div className="bg-charcoal/3 overflow-hidden">
-                        <img
-                            src={cyanotypeWorks[2].image}
-                            alt="Featured cyanotype print"
-                            className="w-full h-auto object-contain"
-                        />
+            {/* Why Cyanotype Section */}
+            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+                <h2 className="text-3xl font-bold text-charcoal mb-8 tracking-tight">
+                    {cyanotypeTexts.whyCyanotype.title}
+                </h2>
+                <div className="max-w-2xl space-y-6">
+                    <p className="text-lg leading-relaxed text-charcoal/75 font-light">
+                        {cyanotypeTexts.whyCyanotype.text}
+                    </p>
+                </div>
+            </section>
+
+            {/* Scale and Perception Section */}
+            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+                <div className="space-y-8">
+                    <div>
+                        <h2 className="text-3xl font-bold text-charcoal mb-6 tracking-tight">
+                            {cyanotypeTexts.scalePerception.title}
+                        </h2>
+                        <p className="text-lg leading-relaxed text-charcoal/75 max-w-3xl font-light">
+                            {cyanotypeTexts.scalePerception.text}
+                        </p>
                     </div>
-                </section>
-            )}
+                </div>
+            </section>
 
             {/* Gallery Section - Editorial Layout */}
             <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
@@ -134,20 +147,6 @@ export default function CyanotypesPage() {
                 </div>
             )}
 
-            {/* Scale and Perception Section */}
-            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-                <div className="space-y-8">
-                    <div>
-                        <h2 className="text-3xl font-bold text-charcoal mb-6 tracking-tight">
-                            {cyanotypeTexts.scalePerception.title}
-                        </h2>
-                        <p className="text-lg leading-relaxed text-charcoal/75 max-w-3xl font-light">
-                            {cyanotypeTexts.scalePerception.text}
-                        </p>
-                    </div>
-                </div>
-            </section>
-
             {/* Process Section */}
             <section className="bg-charcoal/2 py-16 md:py-24">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -189,18 +188,6 @@ export default function CyanotypesPage() {
                             ))}
                         </ul>
                     </div>
-                </div>
-            </section>
-
-            {/* Why Cyanotype Section */}
-            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-                <h2 className="text-3xl font-bold text-charcoal mb-8 tracking-tight">
-                    {cyanotypeTexts.whyCyanotype.title}
-                </h2>
-                <div className="max-w-2xl space-y-6">
-                    <p className="text-lg leading-relaxed text-charcoal/75 font-light">
-                        {cyanotypeTexts.whyCyanotype.text}
-                    </p>
                 </div>
             </section>
 
