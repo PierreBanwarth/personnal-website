@@ -1,6 +1,7 @@
 'use client';
 
 import { cyanotypeWorks } from '@/lib/data';
+import { cyanotypeTexts } from '@/lib/cyanotypeTexts';
 import Link from 'next/link';
 import { useT } from '@/lib/useT';
 import MediaDisplay from '@/components/MediaDisplay';
@@ -9,15 +10,19 @@ export default function CyanotypesPage() {
     const t = useT();
     return (
         <div className="bg-warm-white min-h-screen">
-            {/* Header */}
+            {/* Hero Section - Project Title and Subtitle */}
             <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-                <h1 className="text-4xl md:text-5xl font-bold text-charcoal mb-6">{t('cyanotypes.title')}</h1>
-                <p className="text-lg text-charcoal/70 max-w-3xl">
-                    {t('cyanotypes.description')}
-                </p>
+                <div className="max-w-3xl">
+                    <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-6">
+                        {cyanotypeTexts.presentation.title}
+                    </h1>
+                    <p className="text-xl text-charcoal/80 leading-relaxed">
+                        {cyanotypeTexts.presentation.subtitle}
+                    </p>
+                </div>
             </section>
 
-            {/* Gallery */}
+            {/* Gallery Section */}
             <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
                 <h2 className="text-3xl font-bold text-charcoal mb-12">{t('cyanotypes.gallery')}</h2>
                 {cyanotypeWorks.length > 0 ? (
@@ -51,7 +56,7 @@ export default function CyanotypesPage() {
                     </div>
                 ) : (
                     <div className="max-w-3xl mx-auto text-center py-16">
-                        <p className="text-charcoal/70">No cyanotypes to display yet.</p>
+                        <p className="text-charcoal/70">Les impressions de cyanotype seront bientôt présentées ici.</p>
                     </div>
                 )}
             </section>
@@ -60,64 +65,38 @@ export default function CyanotypesPage() {
             <section className="bg-charcoal/5 py-16 md:py-24 border-y border-charcoal/10">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-3xl mb-12">
-                        <h2 className="text-3xl font-bold text-charcoal mb-6">{t('cyanotypes.about')}</h2>
+                        <h2 className="text-3xl font-bold text-charcoal mb-6">
+                            {cyanotypeTexts.process.title}
+                        </h2>
                         <p className="text-lg text-charcoal/70 mb-6 leading-relaxed">
-                            {t('cyanotypes.processIntro')}
+                            {cyanotypeTexts.process.intro}
                         </p>
                     </div>
 
                     {/* Process Steps */}
                     <div className="grid md:grid-cols-2 gap-12 mb-12">
-                        <div>
-                            <h3 className="text-xl font-bold text-charcoal mb-4">{t('cyanotypes.step1Title')}</h3>
-                            <p className="text-charcoal/70 leading-relaxed">
-                                {t('cyanotypes.step1Desc')}
-                            </p>
-                        </div>
-                        <div>
-                            <h3 className="text-xl font-bold text-charcoal mb-4">{t('cyanotypes.step2Title')}</h3>
-                            <p className="text-charcoal/70 leading-relaxed">
-                                {t('cyanotypes.step2Desc')}
-                            </p>
-                        </div>
-                        <div>
-                            <h3 className="text-xl font-bold text-charcoal mb-4">{t('cyanotypes.step3Title')}</h3>
-                            <p className="text-charcoal/70 leading-relaxed">
-                                {t('cyanotypes.step3Desc')}
-                            </p>
-                        </div>
-                        <div>
-                            <h3 className="text-xl font-bold text-charcoal mb-4">{t('cyanotypes.step4Title')}</h3>
-                            <p className="text-charcoal/70 leading-relaxed">
-                                {t('cyanotypes.step4Desc')}
-                            </p>
-                        </div>
+                        {cyanotypeTexts.process.steps.map((step, index) => (
+                            <div key={index}>
+                                <h3 className="text-xl font-bold text-charcoal mb-4">{step.title}</h3>
+                                <p className="text-charcoal/70 leading-relaxed">
+                                    {step.description}
+                                </p>
+                            </div>
+                        ))}
                     </div>
 
                     {/* Characteristics */}
                     <div className="max-w-3xl">
-                        <h3 className="text-2xl font-bold text-charcoal mb-6">{t('cyanotypes.characteristics')}</h3>
+                        <h3 className="text-2xl font-bold text-charcoal mb-6">
+                            {cyanotypeTexts.characteristics.title}
+                        </h3>
                         <ul className="space-y-3">
-                            <li className="flex items-start gap-4">
-                                <span className="text-cyanotype font-bold mt-1">•</span>
-                                <span className="text-charcoal/80">{t('cyanotypes.char1')}</span>
-                            </li>
-                            <li className="flex items-start gap-4">
-                                <span className="text-cyanotype font-bold mt-1">•</span>
-                                <span className="text-charcoal/80">{t('cyanotypes.char2')}</span>
-                            </li>
-                            <li className="flex items-start gap-4">
-                                <span className="text-cyanotype font-bold mt-1">•</span>
-                                <span className="text-charcoal/80">{t('cyanotypes.char3')}</span>
-                            </li>
-                            <li className="flex items-start gap-4">
-                                <span className="text-cyanotype font-bold mt-1">•</span>
-                                <span className="text-charcoal/80">{t('cyanotypes.char4')}</span>
-                            </li>
-                            <li className="flex items-start gap-4">
-                                <span className="text-cyanotype font-bold mt-1">•</span>
-                                <span className="text-charcoal/80">{t('cyanotypes.char5')}</span>
-                            </li>
+                            {cyanotypeTexts.characteristics.items.map((item, index) => (
+                                <li key={index} className="flex items-start gap-4">
+                                    <span className="text-cyanotype font-bold mt-1">•</span>
+                                    <span className="text-charcoal/80">{item}</span>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
@@ -126,10 +105,35 @@ export default function CyanotypesPage() {
             {/* Why Cyanotype Section */}
             <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
                 <div className="max-w-3xl">
-                    <h2 className="text-3xl font-bold text-charcoal mb-6">{t('cyanotypes.resonance')}</h2>
+                    <h2 className="text-3xl font-bold text-charcoal mb-6">
+                        {cyanotypeTexts.whyCyanotype.title}
+                    </h2>
                     <p className="text-lg text-charcoal/70 leading-relaxed">
-                        {t('cyanotypes.resonanceText')}
+                        {cyanotypeTexts.whyCyanotype.text}
                     </p>
+                </div>
+            </section>
+
+            {/* Scale and Perception Section - Highlighted */}
+            <section className="bg-charcoal/5 py-16 md:py-24 border-y border-charcoal/10">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-3xl">
+                        <h2 className="text-3xl font-bold text-charcoal mb-6">
+                            {cyanotypeTexts.scalePerception.title}
+                        </h2>
+                        <p className="text-lg text-charcoal/70 leading-relaxed">
+                            {cyanotypeTexts.scalePerception.text}
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Credits and Collaboration */}
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+                <div className="max-w-3xl border-t border-charcoal/10 pt-12">
+                    <p className="text-sm text-charcoal/60 mb-4">{cyanotypeTexts.credits.author}</p>
+                    <p className="text-sm text-charcoal/60 mb-4">{cyanotypeTexts.credits.photography}</p>
+                    <p className="text-sm text-charcoal/60">{cyanotypeTexts.credits.collaboration}</p>
                 </div>
             </section>
 
