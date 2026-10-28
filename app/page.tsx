@@ -1,7 +1,7 @@
 'use client';
 
 import MediaDisplay from '@/components/MediaDisplay';
-import { cyanotypeWorks } from '@/lib/data';
+import { photoWorks } from '@/lib/data';
 import { useT } from '@/lib/useT';
 import Link from 'next/link';
 
@@ -22,19 +22,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Image Section */}
+      {/* Featured Photo Gallery */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
-        {cyanotypeWorks[0] && (
-          <div className="relative w-full">
-            <div className="bg-charcoal/5 aspect-video overflow-hidden">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {photoWorks.map((work) => (
+            <div key={work.id} className="bg-charcoal/5 aspect-square overflow-hidden">
               <MediaDisplay
-                image={cyanotypeWorks[0].image}
-                alt={cyanotypeWorks[0].title || 'Featured work'}
-                className="w-full h-full object-cover"
+                image={work.image}
+                alt={work.title || 'Game Boy Camera photograph'}
+                className="w-full h-full object-cover hover:opacity-90 transition-opacity"
               />
             </div>
-          </div>
-        )}
+          ))}
+        </div>
       </section>
 
       {/* Two Main Projects */}
