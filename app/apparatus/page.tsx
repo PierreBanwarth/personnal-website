@@ -173,7 +173,7 @@ export default function ApparatusPage() {
                     </div>
 
                     <p className="text-sm text-charcoal/60 mt-12 pt-8 border-t border-charcoal/10">
-                        These projects represent significant contributions to the Game Boy Camera community. Pierre Banwarth uses this configuration as a photographic tool and does not claim authorship of these developments.
+                        {t('equipment.creditsNote')}
                     </p>
                 </div>
             </section>
@@ -181,15 +181,15 @@ export default function ApparatusPage() {
             {/* Back to Work Section */}
             <section className="bg-charcoal text-warm-white py-16 md:py-24">
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-2xl font-bold mb-4">The Photographs</h2>
+                    <h2 className="text-2xl font-bold mb-4">{t('equipment.backToWorkTitle')}</h2>
                     <p className="text-warm-white/80 mb-8">
-                        The technique matters because it shapes how we see. But what remains are the photographs themselves.
+                        {t('equipment.backToWorkText')}
                     </p>
                     <Link
                         href="/"
                         className="inline-block px-6 py-3 bg-warm-white text-charcoal hover:bg-warm-white/90 transition-colors font-medium"
                     >
-                        View the Work →
+                        {t('home.title')} →
                     </Link>
                 </div>
             </section>

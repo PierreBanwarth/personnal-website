@@ -165,6 +165,9 @@ export const translations = {
       philosophyTitle: 'An Artistic Approach',
       philosophyText: 'I do not present this configuration as objectively the best, nor as a personal invention. I present it as my choice of photographic tool, built from open and community projects. The artistic interest lies in what I do with this tool: the framings, the lights, the compositions, the animated sequences, and the images I choose to transform into prints. Technique illuminates photographic vision—it never replaces it.',
       creditsTitle: 'Community Projects & Credits',
+      creditsNote: 'These projects represent significant contributions to the Game Boy Camera community. Pierre Banwarth uses this configuration as a photographic tool and does not claim authorship of these developments.',
+      backToWorkTitle: 'The Photographs',
+      backToWorkText: 'The technique matters because it shapes how we see. But what remains are the photographs themselves.',
       credits: [
         { name: 'Photo!', role: 'Homebrew software', url: 'https://github.com/untoxa/gb-photo' },
         { name: 'GB Mini Flashable Camera', role: 'Design and documentation', url: 'https://github.com/Raphael-Boichot/Game_Boy_Mini_Flashable_Camera' },
@@ -352,6 +355,9 @@ export const translations = {
       philosophyTitle: 'Une approche artistique',
       philosophyText: 'Je ne présente pas cette configuration comme objectivement la meilleure, ni comme une invention personnelle. Je la présente comme mon choix d\'outil photographique, construit à partir de projets ouverts et communautaires. L\'intérêt artistique réside dans ce que je fais de cet outil : les cadrages, les lumières, les compositions, les séquences animées et les images que je choisis de transformer en impressions. La technique éclairie le regard photographique—elle ne le remplace jamais.',
       creditsTitle: 'Projets communautaires et contributeurs',
+      creditsNote: 'Ces projets représentent une contribution significative à la communauté de la Game Boy Camera. Pierre Banwarth utilise cette configuration comme outil photographique et ne revendique pas la paternité de ces développements.',
+      backToWorkTitle: 'Les photographies',
+      backToWorkText: 'La technique compte parce qu\'elle façonne notre regard. Mais ce qui demeure, ce sont les photographies elles-mêmes.',
       credits: [
         { name: 'Photo!', role: 'Logiciel homebrew', url: 'https://github.com/untoxa/gb-photo' },
         { name: 'GB Mini Flashable Camera', role: 'Conception et documentation', url: 'https://github.com/Raphael-Boichot/Game_Boy_Mini_Flashable_Camera' },
