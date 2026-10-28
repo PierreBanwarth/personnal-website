@@ -141,6 +141,7 @@ export const translations = {
       formMessage: 'Message',
       sendMessage: 'Send Message',
       messageSent: 'Message sent! Thank you for getting in touch.',
+      messageReceivedDesc: 'I have received your inquiry and will get back to you soon.',
     },
     // Equipment Page
     equipment: {
@@ -331,6 +332,7 @@ export const translations = {
       formMessage: 'Message',
       sendMessage: 'Envoyer',
       messageSent: 'Message envoyé ! Merci de nous avoir contacté.',
+      messageReceivedDesc: 'J\'ai bien reçu votre demande et je vous recontacterai bientôt.',
     },
     // Equipment Page
     equipment: {

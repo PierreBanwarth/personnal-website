@@ -108,7 +108,7 @@ export default function ContactPage() {
                             <div className="p-6 bg-cyanotype/10 border border-cyanotype rounded">
                                 <p className="text-charcoal font-semibold mb-2">{t('contact.messageSent')}</p>
                                 <p className="text-sm text-charcoal/80">
-                                    I've received your inquiry and will get back to you soon.
+                                    {t('contact.messageReceivedDesc')}
                                 </p>
                             </div>
                         ) : (
