@@ -1,12 +1,12 @@
 'use client';
 
-import Link from 'next/link';
 import { useT } from '@/lib/useT';
+import Link from 'next/link';
 
 interface Credit {
-  name: string;
-  role: string;
-  url: string;
+    name: string;
+    role: string;
+    url: string;
 }
 
 export default function ApparatusPage() {
@@ -28,7 +28,7 @@ export default function ApparatusPage() {
             {/* Configuration Section */}
             <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mb-12">
                 <h2 className="text-3xl font-bold text-charcoal mb-12">{t('equipment.configurationTitle')}</h2>
-                
+
                 <div className="grid md:grid-cols-2 gap-8">
                     {/* Sensor */}
                     <div className="bg-charcoal/5 p-8 rounded">
@@ -90,15 +90,15 @@ export default function ApparatusPage() {
             <section className="bg-warm-white border-t border-charcoal/10 py-16 md:py-24">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-bold text-charcoal mb-12">{t('equipment.creditsTitle')}</h2>
-                    
+
                     <div className="grid md:grid-cols-2 gap-8">
                         {/* Note: We need to handle the credits array manually since it's an array in translations */}
                         <div className="border-l-2 border-charcoal/20 pl-6">
                             <h3 className="font-bold text-charcoal mb-2">Photo!</h3>
                             <p className="text-sm text-charcoal/70 mb-3">Homebrew software</p>
-                            <a 
-                                href="https://github.com/untoxa/gb-photo" 
-                                target="_blank" 
+                            <a
+                                href="https://github.com/untoxa/gb-photo"
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-charcoal hover:text-charcoal/60 underline text-sm"
                             >
@@ -109,9 +109,9 @@ export default function ApparatusPage() {
                         <div className="border-l-2 border-charcoal/20 pl-6">
                             <h3 className="font-bold text-charcoal mb-2">GB Mini Flashable Camera</h3>
                             <p className="text-sm text-charcoal/70 mb-3">Design and documentation</p>
-                            <a 
-                                href="https://github.com/Raphael-Boichot/Game_Boy_Mini_Flashable_Camera" 
-                                target="_blank" 
+                            <a
+                                href="https://github.com/Raphael-Boichot/Game_Boy_Mini_Flashable_Camera"
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-charcoal hover:text-charcoal/60 underline text-sm"
                             >
@@ -122,9 +122,9 @@ export default function ApparatusPage() {
                         <div className="border-l-2 border-charcoal/20 pl-6">
                             <h3 className="font-bold text-charcoal mb-2">Camera + Mini Shell</h3>
                             <p className="text-sm text-charcoal/70 mb-3">3D printed housing</p>
-                            <a 
-                                href="https://ko-fi.com/s/a4d7bd649a" 
-                                target="_blank" 
+                            <a
+                                href="https://ko-fi.com/s/a4d7bd649a"
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-charcoal hover:text-charcoal/60 underline text-sm"
                             >
@@ -135,9 +135,9 @@ export default function ApparatusPage() {
                         <div className="border-l-2 border-charcoal/20 pl-6">
                             <h3 className="font-bold text-charcoal mb-2">TinyGB Printer</h3>
                             <p className="text-sm text-charcoal/70 mb-3">Print ecosystem</p>
-                            <a 
-                                href="https://github.com/Raphael-Boichot/The-TinyGB-Printer" 
-                                target="_blank" 
+                            <a
+                                href="https://github.com/Raphael-Boichot/The-TinyGB-Printer"
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-charcoal hover:text-charcoal/60 underline text-sm"
                             >
@@ -148,9 +148,9 @@ export default function ApparatusPage() {
                         <div className="border-l-2 border-charcoal/20 pl-6">
                             <h3 className="font-bold text-charcoal mb-2">Pico GB Printer</h3>
                             <p className="text-sm text-charcoal/70 mb-3">Print ecosystem</p>
-                            <a 
-                                href="https://github.com/untoxa/pico-gb-printer" 
-                                target="_blank" 
+                            <a
+                                href="https://github.com/untoxa/pico-gb-printer"
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-charcoal hover:text-charcoal/60 underline text-sm"
                             >
@@ -161,9 +161,9 @@ export default function ApparatusPage() {
                         <div className="border-l-2 border-charcoal/20 pl-6">
                             <h3 className="font-bold text-charcoal mb-2">GBxCart</h3>
                             <p className="text-sm text-charcoal/70 mb-3">Recommended flashing tool</p>
-                            <a 
-                                href="https://www.gbxcart.com/" 
-                                target="_blank" 
+                            <a
+                                href="https://www.gbxcart.com/"
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-charcoal hover:text-charcoal/60 underline text-sm"
                             >

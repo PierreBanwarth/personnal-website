@@ -2,8 +2,8 @@
 
 import MediaDisplay from '@/components/MediaDisplay';
 import { liveWorks } from '@/lib/data';
-import Link from 'next/link';
 import { useT } from '@/lib/useT';
+import Link from 'next/link';
 
 export default function LiveImagesPage() {
     const t = useT();

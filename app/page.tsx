@@ -1,9 +1,9 @@
 'use client';
 
 import MediaDisplay from '@/components/MediaDisplay';
-import { cyanotypeWorks, liveWorks } from '@/lib/data';
-import Link from 'next/link';
+import { cyanotypeWorks } from '@/lib/data';
 import { useT } from '@/lib/useT';
+import Link from 'next/link';
 
 export default function Home() {
   const t = useT();

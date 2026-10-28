@@ -57,12 +57,12 @@ export default function CyanotypesPage() {
                 <h2 className="text-2xl font-bold text-charcoal mb-12 tracking-tight">
                     {cyanotypeTexts.galleryTitle}
                 </h2>
-                
+
                 <div className="space-y-12">
                     {cyanotypeWorks.map((work, index) => (
                         <div key={work.id} className="space-y-4">
                             {/* Image */}
-                            <div 
+                            <div
                                 className="bg-charcoal/3 overflow-hidden cursor-pointer group"
                                 onClick={() => setSelectedImageIndex(index)}
                                 role="button"
@@ -80,7 +80,7 @@ export default function CyanotypesPage() {
                                     className="w-full h-auto object-contain group-hover:opacity-95 transition-opacity"
                                 />
                             </div>
-                            
+
                             {/* Metadata */}
                             <div className="space-y-1">
                                 {work.date && (
@@ -101,12 +101,12 @@ export default function CyanotypesPage() {
 
             {/* Lightbox Modal */}
             {selectedImageIndex !== null && (
-                <div 
+                <div
                     className="fixed inset-0 bg-charcoal/90 z-50 flex items-center justify-center p-4"
                     onClick={() => setSelectedImageIndex(null)}
                     role="presentation"
                 >
-                    <div 
+                    <div
                         className="max-w-4xl max-h-[90vh] overflow-auto"
                         onClick={(e) => e.stopPropagation()}
                     >
@@ -123,7 +123,7 @@ export default function CyanotypesPage() {
                     >
                         ✕
                     </button>
-                    
+
                     {/* Keyboard navigation */}
                     {selectedImageIndex > 0 && (
                         <button

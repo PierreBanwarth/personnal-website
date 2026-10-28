@@ -1,7 +1,7 @@
 'use client';
 
-import Link from 'next/link';
 import { useT } from '@/lib/useT';
+import Link from 'next/link';
 
 export default function AboutPage() {
     const t = useT();

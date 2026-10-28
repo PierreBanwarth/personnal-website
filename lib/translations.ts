@@ -117,7 +117,7 @@ export const translations = {
       resonanceText: 'The cyanotype process creates a direct, tangible relationship between the photograph and the print. Starting from a Game Boy Camera image—itself a constrained digital medium—the cyanotype transforms that constraint into physicality. The deep blue recalls both early photography and material research. The process demands intention: timing, chemistry, materials. Nothing is automatic. Each print emerges as a singular object.',
       gallery: 'Gallery',
       interested: 'Interested in cyanotype prints?',
-      interestedDesc: 'Available as limited editions or commissions.',
+      interestedDesc: 'For exhibitions, collaborations, or inquiries about the work, get in touch.',
       getInTouch: 'Get in Touch →',
     },
     // Contact Page
@@ -307,7 +307,7 @@ export const translations = {
       resonanceText: 'Le processus de cyanotypie crée une relation directe et tangible entre la photographie et l\'impression. À partir d\'une image Game Boy Camera—elle-même un médium numérique restreint—la cyanotypie transforme cette contrainte en physicalité. Le bleu profond évoque à la fois la photographie ancienne et la recherche matérielle. Le processus exige de l\'intention : timing, chimie, matériaux. Rien n\'est automatique. Chaque impression émerge comme un objet singulier.',
       gallery: 'Galerie',
       interested: 'Intéressé par les impressions de cyanotypes ?',
-      interestedDesc: 'Disponible en éditions limitées ou sur commande.',
+      interestedDesc: 'Pour les expositions, les collaborations ou les questions sur le travail, veuillez nous contacter.',
       getInTouch: 'Nous contacter →',
     },
     // Contact Page
@@ -388,11 +388,11 @@ export type TranslationKey = keyof typeof translations.en;
 export function getTranslation(lang: Language, key: string, defaultValue: string = ''): string {
   const keys = key.split('.');
   let value: any = translations[lang];
-  
+
   for (const k of keys) {
     value = value?.[k];
     if (!value) return defaultValue;
   }
-  
+
   return typeof value === 'string' ? value : defaultValue;
 }
