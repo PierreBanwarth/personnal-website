@@ -1,6 +1,6 @@
 'use client';
 
-import MediaDisplay from '@/components/MediaDisplay';
+import PhotoCarousel from '@/components/PhotoCarousel';
 import { photoWorks } from '@/lib/data';
 import { useT } from '@/lib/useT';
 import Link from 'next/link';
@@ -22,19 +22,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Photo Gallery */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {photoWorks.map((work) => (
-            <div key={work.id} className="bg-charcoal/5 aspect-square overflow-hidden">
-              <MediaDisplay
-                image={work.image}
-                alt={work.title || 'Game Boy Camera photograph'}
-                className="w-full h-full object-cover hover:opacity-90 transition-opacity"
-              />
-            </div>
-          ))}
-        </div>
+      {/* Featured Photo Carousel */}
+      <section className="w-full mb-24">
+        <PhotoCarousel works={photoWorks} />
       </section>
 
       {/* Two Main Projects */}
