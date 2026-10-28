@@ -1,13 +1,12 @@
 'use client';
 
 import { cyanotypeWorks } from '@/lib/data';
-import { cyanotypeTexts } from '@/lib/cyanotypeTexts';
+import { useCyanotypeTexts } from '@/lib/useCyanotypeTexts';
 import Link from 'next/link';
-import { useT } from '@/lib/useT';
 import { useState } from 'react';
 
 export default function CyanotypesPage() {
-    const t = useT();
+    const cyanotypeTexts = useCyanotypeTexts();
     const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
     return (
@@ -56,7 +55,7 @@ export default function CyanotypesPage() {
             {/* Gallery Section - Editorial Layout */}
             <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
                 <h2 className="text-2xl font-bold text-charcoal mb-12 tracking-tight">
-                    La Série
+                    {cyanotypeTexts.galleryTitle}
                 </h2>
                 
                 <div className="space-y-12">
