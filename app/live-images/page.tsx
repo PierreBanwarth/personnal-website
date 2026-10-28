@@ -11,10 +11,32 @@ export default function LiveImagesPage() {
         <div className="bg-warm-white min-h-screen">
             {/* Header */}
             <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-                <h1 className="text-4xl md:text-5xl font-bold text-charcoal mb-6">{t('liveVideos.title')}</h1>
-                <p className="text-lg text-charcoal/70 max-w-3xl">
-                    {t('liveVideos.description')}
-                </p>
+                <div className="space-y-4 mb-16">
+                    <p className="text-xs uppercase tracking-widest text-charcoal/60 font-semibold">
+                        Série vidéographique
+                    </p>
+                    <h1 className="text-6xl md:text-7xl font-bold text-charcoal leading-tight">
+                        Image en mouvement
+                    </h1>
+                </div>
+            </section>
+
+            {/* Editorial Text Section */}
+            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+                <div className="max-w-3xl space-y-6">
+                    <p className="text-lg leading-relaxed text-charcoal/75 font-light">
+                        Une image isolée ne livre pas toujours immédiatement ce qu'elle contient. Avec la Game Boy Camera, les formes se confondent, les visages se mêlent aux instruments, les silhouettes se fragmentent dans une trame de pixels. Certaines scènes demeurent ambiguës, à la frontière entre abstraction et figuration.
+                    </p>
+                    <p className="text-lg leading-relaxed text-charcoal/75 font-light">
+                        Le passage à l'image en mouvement transforme cette perception. D'une image à l'autre, quelque chose se précise. Un geste, un déplacement, un changement de posture viennent éclairer ce qui, quelques instants plus tôt, restait incertain. Le regard recompose progressivement la scène, cherche des repères, reconnaît des présences.
+                    </p>
+                    <p className="text-lg leading-relaxed text-charcoal/75 font-light">
+                        Le mouvement ne vient pas simplement prolonger la photographie : il en révèle parfois le sens. Là où l'image fixe suspend un instant, la séquence fait apparaître une continuité. Elle laisse au regard le temps de comprendre, ou parfois de continuer à hésiter.
+                    </p>
+                    <p className="text-lg leading-relaxed text-charcoal/75 font-light">
+                        Ces vidéos proposent ainsi une autre manière d'habiter les images : non plus seulement les contempler, mais les traverser dans le temps.
+                    </p>
+                </div>
             </section>
 
             {/* Gallery Grid */}
