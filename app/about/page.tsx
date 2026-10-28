@@ -14,6 +14,14 @@ export default function AboutPage() {
 
             {/* Main Content */}
             <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+                {/* Biography Section */}
+                <div className="mb-16 pb-16 border-b border-charcoal/10">
+                    <h2 className="text-2xl font-bold text-charcoal mb-6">{t('about.biography')}</h2>
+                    <p className="text-charcoal/80 leading-relaxed whitespace-pre-line">
+                        {t('about.biographyText')}
+                    </p>
+                </div>
+
                 {/* Practice Section */}
                 <div className="mb-16">
                     <h2 className="text-2xl font-bold text-charcoal mb-6">{t('about.gameBoyCameraTitle')}</h2>

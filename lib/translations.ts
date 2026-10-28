@@ -77,6 +77,8 @@ export const translations = {
     // About Page
     about: {
       title: 'About',
+      biography: 'About Pierre Banwarth',
+      biographyText: 'I am a musician, having explored traditional Irish music and various experimental approaches for many years. Music is the thread running through my projects—artistic, technical, and experimental. I have a passion for understanding how things work, repurposing objects, building tools, and inventing new ways of making. I developed an open-source MIDI concertina project, a meeting point between traditional instrument and digital creation. Today, I also explore photography with a Game Boy Camera. Another way to capture moments, to play with technical constraints, and to look differently at what surrounds me, especially in concert settings. From music to electronics, from code to image, I pursue the same approach: experiment, make, and find new ways to give form to what I am passionate about.',
       gameBoyCameraTitle: 'Photography with Game Boy Camera',
       gameBoyCameraDesc1: 'The Game Boy Camera, released in 1998, is a digital camera designed for the Nintendo Game Boy. As a tool, it is constrained: limited resolution, monochrome palette, small screen. Yet these constraints are creative possibilities.',
       gameBoyCameraDesc2: 'I use this camera to photograph concerts, dancers, musicians, and moments of performance. The resulting images are not exercises in nostalgia. They are photographs, made within the technical language of the Game Boy Camera, exploring composition, contrast, and the relationship between figure and ground.',
@@ -262,6 +264,8 @@ export const translations = {
     // About Page
     about: {
       title: 'À propos',
+      biography: 'À propos de Pierre Banwarth',
+      biographyText: 'Je suis musicien depuis de nombreuses années, principalement autour des musiques traditionnelles irlandaises. La musique est le fil conducteur de mes projets, qu\'ils soient artistiques, techniques ou expérimentaux. J\'aime comprendre comment les choses fonctionnent, détourner des objets, bricoler des outils et inventer de nouvelles façons de faire. J\'ai notamment développé un projet open source de concertina MIDI, à la croisée de l\'instrument traditionnel et de la création numérique. Aujourd\'hui, j\'explore aussi la photographie avec une Game Boy Camera. Une autre manière de capturer les moments, de jouer avec les contraintes techniques et de regarder autrement ce qui m\'entoure, notamment dans les concerts. De la musique à l\'électronique, du code à l\'image, je poursuis finalement la même démarche : expérimenter, fabriquer et trouver de nouvelles façons de donner forme à ce qui me passionne.',
       gameBoyCameraTitle: 'Photographie avec Game Boy Camera',
       gameBoyCameraDesc1: 'La Game Boy Camera, lancée en 1998, est une caméra numérique conçue pour le Nintendo Game Boy. En tant qu\'outil, elle est restreinte : résolution limitée, palette monochrome, petit écran. Mais ces contraintes sont des possibilités créatives.',
       gameBoyCameraDesc2: 'J\'utilise cette caméra pour photographier des concerts, des danseurs, des musiciens et des moments de performance. Les images résultantes ne sont pas des exercices nostalgiques. Ce sont des photographies, réalisées dans le langage technique de la Game Boy Camera, explorant la composition, le contraste et la relation entre la figure et le fond.',
