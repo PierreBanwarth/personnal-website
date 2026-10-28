@@ -40,18 +40,18 @@ export default function LiveImagesPage() {
                     {liveWorks.map((work) => (
                         <div key={work.id} className="group">
                             {(work.video || work.image) && (
-                                <div className="relative bg-charcoal/5 aspect-square mb-6 overflow-hidden rounded">
+                                <div className="relative bg-charcoal/5 aspect-square mb-4 overflow-hidden rounded">
                                     <MediaDisplay
                                         video={work.video}
                                         image={work.image}
-                                        alt={work.title}
+                                        alt={work.title || `Performance ${work.id}`}
                                         className="group-hover:opacity-90 transition-opacity duration-300"
                                     />
                                 </div>
                             )}
-                            <h2 className="text-xl font-semibold text-charcoal mb-2">{work.title}</h2>
-                            {work.date && <p className="text-sm text-charcoal/60 font-mono mb-2">{work.date}</p>}
-                            {work.description && <p className="text-sm text-charcoal/70">{work.description}</p>}
+                            {work.title && <h2 className="text-xl font-semibold text-charcoal mb-2">{work.title}</h2>}
+                            {work.date && <p className="text-xs text-charcoal/60 font-mono uppercase tracking-wider">{work.date}</p>}
+                            {work.description && <p className="text-sm text-charcoal/70 mt-2">{work.description}</p>}
                         </div>
                     ))}
                 </div>

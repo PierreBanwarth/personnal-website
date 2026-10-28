@@ -125,7 +125,7 @@ export const cyanotypeWorks: Work[] = [
 export const photoWorks: Work[] = [
     {
         id: 'photo-001',
-        title: 'Snapshot #1',
+        title: '',
         type: 'photo',
         image: assetPath('/images/photos/photo-001.png'),
         date: '2024',
@@ -134,7 +134,7 @@ export const photoWorks: Work[] = [
     },
     {
         id: 'photo-002',
-        title: 'Snapshot #2',
+        title: '',
         type: 'photo',
         image: assetPath('/images/photos/photo-002.png'),
         date: '2024',
@@ -143,7 +143,7 @@ export const photoWorks: Work[] = [
     },
     {
         id: 'photo-003',
-        title: 'Snapshot #3',
+        title: '',
         type: 'photo',
         image: assetPath('/images/photos/photo-003.png'),
         date: '2024',
@@ -152,7 +152,7 @@ export const photoWorks: Work[] = [
     },
     {
         id: 'photo-004',
-        title: 'Snapshot #4',
+        title: '',
         type: 'photo',
         image: assetPath('/images/photos/photo-004.png'),
         date: '2024',
@@ -161,7 +161,7 @@ export const photoWorks: Work[] = [
     },
     {
         id: 'photo-005',
-        title: 'Snapshot #5',
+        title: '',
         type: 'photo',
         image: assetPath('/images/photos/photo-005.png'),
         date: '2024',
@@ -170,7 +170,7 @@ export const photoWorks: Work[] = [
     },
     {
         id: 'photo-006',
-        title: 'Snapshot #6',
+        title: '',
         type: 'photo',
         image: assetPath('/images/photos/photo-006.png'),
         date: '2024',
@@ -179,7 +179,7 @@ export const photoWorks: Work[] = [
     },
     {
         id: 'photo-007',
-        title: 'Snapshot #7',
+        title: '',
         type: 'photo',
         image: assetPath('/images/photos/photo-007.png'),
         date: '2024',
@@ -188,7 +188,7 @@ export const photoWorks: Work[] = [
     },
     {
         id: 'photo-008',
-        title: 'Snapshot #8',
+        title: '',
         type: 'photo',
         image: assetPath('/images/photos/photo-008.png'),
         date: '2024',
@@ -197,7 +197,7 @@ export const photoWorks: Work[] = [
     },
     {
         id: 'photo-009',
-        title: 'Snapshot #9',
+        title: '',
         type: 'photo',
         image: assetPath('/images/photos/photo-009.png'),
         date: '2024',
@@ -206,7 +206,7 @@ export const photoWorks: Work[] = [
     },
     {
         id: 'photo-010',
-        title: 'Snapshot #10',
+        title: '',
         type: 'photo',
         image: assetPath('/images/photos/photo-010.png'),
         date: '2024',
@@ -215,7 +215,7 @@ export const photoWorks: Work[] = [
     },
     {
         id: 'photo-011',
-        title: 'Snapshot #11',
+        title: '',
         type: 'photo',
         image: assetPath('/images/photos/photo-011.png'),
         date: '2024',
@@ -224,7 +224,7 @@ export const photoWorks: Work[] = [
     },
     {
         id: 'photo-012',
-        title: 'Snapshot #12',
+        title: '',
         type: 'photo',
         image: assetPath('/images/photos/photo-012.png'),
         date: '2024',
@@ -233,7 +233,7 @@ export const photoWorks: Work[] = [
     },
     {
         id: 'photo-013',
-        title: 'Snapshot #13',
+        title: '',
         type: 'photo',
         image: assetPath('/images/photos/photo-013.png'),
         date: '2024',
@@ -242,7 +242,7 @@ export const photoWorks: Work[] = [
     },
     {
         id: 'photo-014',
-        title: 'Snapshot #14',
+        title: '',
         type: 'photo',
         image: assetPath('/images/photos/photo-014.png'),
         date: '2024',
@@ -251,7 +251,7 @@ export const photoWorks: Work[] = [
     },
     {
         id: 'photo-015',
-        title: 'Snapshot #15',
+        title: '',
         type: 'photo',
         image: assetPath('/images/photos/photo-015.png'),
         date: '2024',
@@ -260,7 +260,7 @@ export const photoWorks: Work[] = [
     },
     {
         id: 'photo-016',
-        title: 'Snapshot #16',
+        title: '',
         type: 'photo',
         image: assetPath('/images/photos/photo-016.png'),
         date: '2024',
@@ -269,7 +269,7 @@ export const photoWorks: Work[] = [
     },
     {
         id: 'photo-017',
-        title: 'Snapshot #17',
+        title: '',
         type: 'photo',
         image: assetPath('/images/photos/photo-017.png'),
         date: '2024',
@@ -278,7 +278,7 @@ export const photoWorks: Work[] = [
     },
     {
         id: 'photo-018',
-        title: 'Snapshot #18',
+        title: '',
         type: 'photo',
         image: assetPath('/images/photos/photo-018.png'),
         date: '2024',
@@ -287,7 +287,7 @@ export const photoWorks: Work[] = [
     },
     {
         id: 'photo-019',
-        title: 'Snapshot #19',
+        title: '',
         type: 'photo',
         image: assetPath('/images/photos/photo-019.png'),
         date: '2024',
