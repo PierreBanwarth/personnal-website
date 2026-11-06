@@ -17,6 +17,8 @@ export interface Work {
     dimensions?: string;
     credits?: string;
     instagramUrl?: string;
+    // Version anglaise des textes affichés (title, description, location)
+    en?: { title?: string; description?: string; location?: string };
 }
 
 export interface Project {
@@ -34,59 +36,58 @@ export interface Project {
 export const liveWorks: Work[] = [
     {
         id: 'live-001',
-        title: '',
+        title: 'Poppy Seeds',
         type: 'live',
-        video: assetPath('/images/videos/ezgif-2cc0782747beb57c.mp4'),
-        date: '2024',
+        video: assetPath('/images/videos/ezgif-55d61aa28c300bbb.mp4'),
+        date: '2026',
+        location: 'Festival de Mesquer',
         description: '',
+        en: { location: 'Mesquer festival' },
     },
     {
         id: 'live-002',
-        title: '',
+        title: "After movie de la Fête de l'accordéon",
         type: 'live',
-        video: assetPath('/images/videos/ezgif-3d6aa3ee7df39abe.mp4'),
-        date: '2024',
+        video: assetPath('/images/videos/ezgif-6333395bc3e4023c.mp4'),
+        date: '2026',
+        location: 'Luzy',
         description: '',
+        en: { title: "Fête de l'accordéon after movie" },
     },
     {
         id: 'live-003',
-        title: '',
+        title: 'Jeanne Lemoine',
         type: 'live',
-        video: assetPath('/images/videos/ezgif-55d61aa28c300bbb.mp4'),
-        date: '2024',
-        description: '',
+        video: assetPath('/images/videos/ezgif-72418dbb15a6ae5e.mp4'),
+        date: '2026',
+        location: 'Festival Fisel',
+        description: 'En solo.',
+        en: { description: 'Solo set.' },
     },
     {
         id: 'live-004',
-        title: '',
+        title: 'OSSO',
         type: 'live',
-        video: assetPath('/images/videos/ezgif-6333395bc3e4023c.mp4'),
-        date: '2024',
-        description: '',
+        video: assetPath('/images/videos/ezgif-7bdf35f609f2fa58.mp4'),
+        date: '2026',
+        description:
+            'Un groupe qui utilise des oscillateurs pour imiter des sons traditionnels, pour un bal fest-noz moderne.',
+        en: {
+            description:
+                'A band that uses oscillators to imitate traditional sounds for a modern fest-noz dance.',
+        },
     },
     {
         id: 'live-005',
-        title: '',
-        type: 'live',
-        video: assetPath('/images/videos/ezgif-72418dbb15a6ae5e.mp4'),
-        date: '2024',
-        description: '',
-    },
-    {
-        id: 'live-006',
-        title: '',
-        type: 'live',
-        video: assetPath('/images/videos/ezgif-7bdf35f609f2fa58.mp4'),
-        date: '2024',
-        description: '',
-    },
-    {
-        id: 'live-007',
-        title: '',
+        title: "Souvenirs de l'été",
         type: 'live',
         video: assetPath('/images/videos/ezgif-8ab7f5be57c070cf.mp4'),
-        date: '2024',
-        description: '',
+        date: '2026',
+        description: 'Des moments de vie captés à la Game Boy Camera, avec un peu de musique.',
+        en: {
+            title: 'Summer memories',
+            description: 'Moments of everyday life captured with the Game Boy Camera, with a little music.',
+        },
     },
 ];
 
@@ -303,7 +304,7 @@ export const liveProjects: Project[] = [
         slug: 'live-images',
         type: 'live',
         description: 'A collection of videos capturing moments from concert performances and live events using Game Boy Camera.',
-        image: assetPath('/images/videos/ezgif-2cc0782747beb57c.mp4'),
+        image: assetPath('/images/videos/ezgif-55d61aa28c300bbb.mp4'),
         works: liveWorks.map(w => w.id),
     },
 ];

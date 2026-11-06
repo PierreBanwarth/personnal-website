@@ -2,11 +2,13 @@
 
 import { cyanotypeWorks } from '@/lib/data';
 import { useCyanotypeTexts } from '@/lib/useCyanotypeTexts';
+import { useT } from '@/lib/useT';
 import Link from 'next/link';
 import { useState } from 'react';
 
 export default function CyanotypesPage() {
     const cyanotypeTexts = useCyanotypeTexts();
+    const t = useT();
     const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
     return (
@@ -15,7 +17,7 @@ export default function CyanotypesPage() {
             <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 md:pt-24 pb-8 md:pb-12">
                 <div className="space-y-4 mb-16">
                     <p className="text-xs uppercase tracking-widest text-charcoal/60 font-semibold">
-                        Série photographique
+                        {t('cyanotypes.series')}
                     </p>
                     <h1 className="text-6xl md:text-7xl font-bold text-charcoal leading-tight">
                         {cyanotypeTexts.presentation.title}
@@ -72,7 +74,7 @@ export default function CyanotypesPage() {
                                         setSelectedImageIndex(index);
                                     }
                                 }}
-                                aria-label={`Ouvrir l'image agrandie ${index + 1}`}
+                                aria-label={`${t('cyanotypes.openImage')} ${index + 1}`}
                             >
                                 <img
                                     src={work.image}
@@ -119,7 +121,7 @@ export default function CyanotypesPage() {
                     <button
                         onClick={() => setSelectedImageIndex(null)}
                         className="absolute top-6 right-6 text-warm-white hover:text-warm-white/70 transition-colors text-2xl p-2"
-                        aria-label="Fermer"
+                        aria-label={t('cyanotypes.close')}
                     >
                         ✕
                     </button>
@@ -129,7 +131,7 @@ export default function CyanotypesPage() {
                         <button
                             onClick={() => setSelectedImageIndex(selectedImageIndex - 1)}
                             className="absolute left-4 top-1/2 -translate-y-1/2 text-warm-white hover:text-warm-white/70 transition-colors text-3xl p-2"
-                            aria-label="Image précédente"
+                            aria-label={t('cyanotypes.previousImage')}
                         >
                             ‹
                         </button>
@@ -138,7 +140,7 @@ export default function CyanotypesPage() {
                         <button
                             onClick={() => setSelectedImageIndex(selectedImageIndex + 1)}
                             className="absolute right-4 top-1/2 -translate-y-1/2 text-warm-white hover:text-warm-white/70 transition-colors text-3xl p-2"
-                            aria-label="Image suivante"
+                            aria-label={t('cyanotypes.nextImage')}
                         >
                             ›
                         </button>
@@ -205,19 +207,19 @@ export default function CyanotypesPage() {
             <section className="bg-charcoal text-warm-white py-16 md:py-24">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <p className="text-sm uppercase tracking-widest text-warm-white/70 mb-4 font-semibold">
-                        Collaborations & Commandes
+                        {t('cyanotypes.collabEyebrow')}
                     </p>
                     <h2 className="text-3xl font-bold mb-6 tracking-tight">
-                        Vous êtes intéressé
+                        {t('cyanotypes.interested')}
                     </h2>
                     <p className="text-warm-white/80 mb-8 max-w-xl mx-auto font-light">
-                        Pour en savoir plus sur les tirages, les collaborations ou les expositions.
+                        {t('cyanotypes.interestedDesc')}
                     </p>
                     <Link
                         href="/contact"
                         className="inline-block px-8 py-3 bg-warm-white text-charcoal hover:bg-warm-white/90 transition-colors font-semibold text-sm uppercase tracking-wide"
                     >
-                        Nous contacter
+                        {t('cyanotypes.getInTouch')}
                     </Link>
                 </div>
             </section>

@@ -2,11 +2,13 @@
 
 import MediaDisplay from '@/components/MediaDisplay';
 import { liveWorks } from '@/lib/data';
+import { useLanguage } from '@/app/LanguageContext';
 import { useT } from '@/lib/useT';
 import Link from 'next/link';
 
 export default function LiveImagesPage() {
     const t = useT();
+    const { language } = useLanguage();
     return (
         <div className="bg-warm-white min-h-screen">
             {/* Header */}
@@ -37,23 +39,30 @@ export default function LiveImagesPage() {
             {/* Gallery Grid */}
             <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {liveWorks.map((work) => (
+                    {liveWorks.map((work) => {
+                        const en = language === 'en' ? work.en : undefined;
+                        const title = en?.title ?? work.title;
+                        const description = en?.description ?? work.description;
+                        const location = en?.location ?? work.location;
+                        const meta = [work.date, location].filter(Boolean).join(' · ');
+                        return (
                         <div key={work.id} className="group">
                             {(work.video || work.image) && (
                                 <div className="relative bg-charcoal/5 aspect-square mb-4 overflow-hidden rounded">
                                     <MediaDisplay
                                         video={work.video}
                                         image={work.image}
-                                        alt={work.title || `Performance ${work.id}`}
+                                        alt={title || `Performance ${work.id}`}
                                         className="group-hover:opacity-90 transition-opacity duration-300"
                                     />
                                 </div>
                             )}
-                            {work.title && <h2 className="text-xl font-semibold text-charcoal mb-2">{work.title}</h2>}
-                            {work.date && <p className="text-xs text-charcoal/60 font-mono uppercase tracking-wider">{work.date}</p>}
-                            {work.description && <p className="text-sm text-charcoal/70 mt-2">{work.description}</p>}
+                            {title && <h2 className="text-xl font-semibold text-charcoal mb-2">{title}</h2>}
+                            {meta && <p className="text-xs text-charcoal/60 font-mono uppercase tracking-wider">{meta}</p>}
+                            {description && <p className="text-sm text-charcoal/70 mt-2">{description}</p>}
                         </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </section>
 
