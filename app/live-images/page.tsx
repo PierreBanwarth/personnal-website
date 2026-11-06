@@ -42,9 +42,6 @@ export default function LiveImagesPage() {
                     {liveWorks.map((work) => {
                         const en = language === 'en' ? work.en : undefined;
                         const title = en?.title ?? work.title;
-                        const description = en?.description ?? work.description;
-                        const location = en?.location ?? work.location;
-                        const meta = [work.date, location].filter(Boolean).join(' · ');
                         return (
                         <div key={work.id} className="group">
                             {(work.video || work.image) && (
@@ -58,8 +55,7 @@ export default function LiveImagesPage() {
                                 </div>
                             )}
                             {title && <h2 className="text-xl font-semibold text-charcoal mb-2">{title}</h2>}
-                            {meta && <p className="text-xs text-charcoal/60 font-mono uppercase tracking-wider">{meta}</p>}
-                            {description && <p className="text-sm text-charcoal/70 mt-2">{description}</p>}
+                            {work.date && <p className="text-xs text-charcoal/60 font-mono uppercase tracking-wider">{work.date}</p>}
                         </div>
                         );
                     })}

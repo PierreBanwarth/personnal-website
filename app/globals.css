@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F1EEE6;
+  --background: #C9C8C0;
   --foreground: #171717;
   --cyanotype: #244B98;
 }
@@ -11,7 +11,7 @@
   --color-foreground: var(--foreground);
   --color-cyanotype: var(--cyanotype);
   --color-charcoal: #171717;
-  --color-warm-white: #F1EEE6;
+  --color-warm-white: #C9C8C0;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

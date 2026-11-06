@@ -1,105 +1,18 @@
 'use client';
 
 import { cyanotypeWorks } from '@/lib/data';
-import { useCyanotypeTexts } from '@/lib/useCyanotypeTexts';
+import CyanotypeArticle from '@/components/CyanotypeArticle';
 import { useT } from '@/lib/useT';
 import Link from 'next/link';
 import { useState } from 'react';
 
 export default function CyanotypesPage() {
-    const cyanotypeTexts = useCyanotypeTexts();
     const t = useT();
     const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
     return (
         <div className="bg-warm-white min-h-screen">
-            {/* Introduction / Hero Section */}
-            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 md:pt-24 pb-8 md:pb-12">
-                <div className="space-y-4 mb-16">
-                    <p className="text-xs uppercase tracking-widest text-charcoal/60 font-semibold">
-                        {t('cyanotypes.series')}
-                    </p>
-                    <h1 className="text-6xl md:text-7xl font-bold text-charcoal leading-tight">
-                        {cyanotypeTexts.presentation.title}
-                    </h1>
-                </div>
-                <p className="text-lg leading-relaxed text-charcoal/75 max-w-3xl font-light">
-                    {cyanotypeTexts.presentation.subtitle}
-                </p>
-            </section>
-
-            {/* Why Cyanotype Section */}
-            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-                <h2 className="text-3xl font-bold text-charcoal mb-8 tracking-tight">
-                    {cyanotypeTexts.whyCyanotype.title}
-                </h2>
-                <div className="max-w-2xl space-y-6">
-                    <p className="text-lg leading-relaxed text-charcoal/75 font-light">
-                        {cyanotypeTexts.whyCyanotype.text}
-                    </p>
-                </div>
-            </section>
-
-            {/* Scale and Perception Section */}
-            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-                <div className="space-y-8">
-                    <div>
-                        <h2 className="text-3xl font-bold text-charcoal mb-6 tracking-tight">
-                            {cyanotypeTexts.scalePerception.title}
-                        </h2>
-                        <p className="text-lg leading-relaxed text-charcoal/75 max-w-3xl font-light">
-                            {cyanotypeTexts.scalePerception.text}
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            {/* Gallery Section - Editorial Layout */}
-            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-                <h2 className="text-2xl font-bold text-charcoal mb-12 tracking-tight">
-                    {cyanotypeTexts.galleryTitle}
-                </h2>
-
-                <div className="space-y-12">
-                    {cyanotypeWorks.map((work, index) => (
-                        <div key={work.id} className="space-y-4">
-                            {/* Image */}
-                            <div
-                                className="bg-charcoal/3 overflow-hidden cursor-pointer group"
-                                onClick={() => setSelectedImageIndex(index)}
-                                role="button"
-                                tabIndex={0}
-                                onKeyDown={(e) => {
-                                    if (e.key === 'Enter' || e.key === ' ') {
-                                        setSelectedImageIndex(index);
-                                    }
-                                }}
-                                aria-label={`${t('cyanotypes.openImage')} ${index + 1}`}
-                            >
-                                <img
-                                    src={work.image}
-                                    alt=""
-                                    className="w-full h-auto object-contain group-hover:opacity-95 transition-opacity"
-                                />
-                            </div>
-
-                            {/* Metadata */}
-                            <div className="space-y-1">
-                                {work.date && (
-                                    <p className="text-xs uppercase tracking-widest text-charcoal/50 font-semibold">
-                                        {work.date}
-                                    </p>
-                                )}
-                                {work.technique && (
-                                    <p className="text-sm text-charcoal/60">
-                                        {work.technique}
-                                    </p>
-                                )}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </section>
+            <CyanotypeArticle onOpenImage={setSelectedImageIndex} />
 
             {/* Lightbox Modal */}
             {selectedImageIndex !== null && (
@@ -148,57 +61,13 @@ export default function CyanotypesPage() {
                 </div>
             )}
 
-            {/* Process Section */}
-            <section className="bg-charcoal/2 py-16 md:py-24">
-                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl font-bold text-charcoal mb-3 tracking-tight">
-                        {cyanotypeTexts.process.title}
-                    </h2>
-                    <p className="text-base text-charcoal/70 mb-12 max-w-3xl font-light">
-                        {cyanotypeTexts.process.intro}
-                    </p>
-
-                    {/* Process Steps with Subtle Numbering */}
-                    <div className="space-y-12 max-w-3xl">
-                        {cyanotypeTexts.process.steps.map((step, index) => (
-                            <div key={index} className="space-y-3">
-                                <div className="flex items-start gap-4">
-                                    <span className="text-xs uppercase tracking-widest text-cyanotype font-bold flex-shrink-0">
-                                        {String(index + 1).padStart(2, '0')}
-                                    </span>
-                                    <h3 className="text-xl font-bold text-charcoal">{step.title}</h3>
-                                </div>
-                                <p className="text-base text-charcoal/70 leading-relaxed font-light ml-12">
-                                    {step.description}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Characteristics */}
-                    <div className="mt-16 space-y-4 max-w-3xl">
-                        <h3 className="text-xl font-bold text-charcoal">
-                            {cyanotypeTexts.characteristics.title}
-                        </h3>
-                        <ul className="space-y-3">
-                            {cyanotypeTexts.characteristics.items.map((item, index) => (
-                                <li key={index} className="flex items-start gap-3">
-                                    <span className="text-cyanotype font-bold flex-shrink-0 mt-0.5">−</span>
-                                    <span className="text-charcoal/75 font-light">{item}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
             {/* Credits Section */}
-            <section className="border-t border-charcoal/10 py-12 md:py-16">
+            <section className="border-t border-charcoal/10 py-12 md:py-16 mt-16">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-2xl space-y-2 text-sm text-charcoal/60 font-light">
-                        <p>{cyanotypeTexts.credits.photography}</p>
-                        <p>{cyanotypeTexts.credits.author}</p>
-                        <p>{cyanotypeTexts.credits.collaboration}</p>
+                        <p>{t('cyanotypesEditorial.creditsPhotography')}</p>
+                        <p>{t('cyanotypesEditorial.creditsAuthor')}</p>
+                        <p>{t('cyanotypesEditorial.creditsCollaboration')}</p>
                     </div>
                 </div>
             </section>
