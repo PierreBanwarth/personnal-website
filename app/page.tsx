@@ -23,7 +23,7 @@ export default function Home() {
       </section>
 
       {/* Featured Photo Carousel */}
-      <section className="w-full mb-24">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
         <PhotoCarousel works={photoWorks} />
       </section>
 
@@ -52,7 +52,7 @@ export default function Home() {
             </p>
             <Link
               href="/cyanotypes"
-              className="inline-block px-6 py-3 bg-cyanotype text-warm-white hover:bg-cyanotype/90 transition-colors font-medium"
+              className="inline-block px-6 py-3 bg-charcoal text-warm-white hover:bg-charcoal/90 transition-colors font-medium"
             >
               {t('home.viewPrints')}
             </Link>

@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from 'react';
 import { useT } from '@/lib/useT';
+import ObfuscatedEmail from '@/components/ObfuscatedEmail';
 
 export default function ContactPage() {
     const t = useT();
@@ -57,12 +58,7 @@ export default function ContactPage() {
                             {/* Email */}
                             <div>
                                 <h3 className="font-semibold text-charcoal mb-2">{t('contact.email')}</h3>
-                                <a
-                                    href="mailto:contact@pierrebanwarth.com"
-                                    className="text-charcoal hover:text-charcoal/60 transition-colors break-all"
-                                >
-                                    contact@pierrebanwarth.com
-                                </a>
+                                <ObfuscatedEmail className="text-charcoal hover:text-charcoal/60 transition-colors" />
                             </div>
 
                             {/* Instagram */}

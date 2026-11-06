@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useT } from '@/lib/useT';
+import ObfuscatedEmail from '@/components/ObfuscatedEmail';
 
 export default function Footer() {
     const [currentYear, setCurrentYear] = useState(2026);
@@ -21,12 +22,7 @@ export default function Footer() {
                         <p className="text-sm text-warm-white/80 mb-2">
                             {t('footer.contactDesc')}
                         </p>
-                        <a
-                            href="mailto:contact@pierrebanwarth.com"
-                            className="text-sm text-warm-white hover:text-warm-white/70 transition-colors"
-                        >
-                            contact@pierrebanwarth.com
-                        </a>
+                        <ObfuscatedEmail className="text-sm text-warm-white hover:text-warm-white/70 transition-colors" />
                     </div>
 
                     {/* Follow */}

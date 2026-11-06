@@ -66,7 +66,7 @@ export const cyanotypeTexts = {
 
     // Credits
     credits: {
-        author: 'Textes : Thierry',
+        author: 'Textes : Thierry Chabanis',
         photography: 'Photographie : Pierre Banwarth',
         collaboration: 'Collaboration artistique et technique pour la production des cyanotypes',
     },
