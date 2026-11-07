@@ -18,13 +18,13 @@ export type ArticleBlock =
 export const articleHeader = {
     title: { fr: 'De la Game Boy au cyanotype', en: 'From Game Boy to Cyanotype' } as Bi,
     subtitle: {
-        fr: 'L\u2019art du tireur face au d\u00e9fi du pixel',
-        en: 'The printer\u2019s art facing the pixel challenge',
+        fr: 'L\'art du tireur face au défi du pixel',
+        en: 'The printer\'s art facing the pixel challenge',
     } as Bi,
     byline: { fr: 'par Thierry Chabanis', en: 'by Thierry Chabanis' } as Bi,
 };
 
-export const stepLabel: Bi = { fr: '\u00c9tape', en: 'Step' };
+export const stepLabel: Bi = { fr: 'Étape', en: 'Step' };
 
 export const article: ArticleBlock[] = [
     { type: 'image', index: 0 },
@@ -187,4 +187,8 @@ export const article: ArticleBlock[] = [
         },
     },
     { type: 'image', index: 3 },
+    { type: 'image', index: 4 },
+    { type: 'image', index: 5 },
+    { type: 'image', index: 6 },
+    { type: 'image', index: 7 },
 ];
