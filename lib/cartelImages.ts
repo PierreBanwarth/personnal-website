@@ -5,9 +5,12 @@ import { assetPath } from './assetPath';
 const IMAGE_EXT = /\.(png|jpe?g|jfif|webp|gif)$/i;
 // originale-1.png, originale1.png, originaux.png... (le numéro 0 ou un nom sans numéro est l'œuvre centrale)
 const ORIGINAL = /^origin(?:ale|aux)-?(\d+)?(?:\.[a-z]+)+$/i;
+// cadre.jpg : photo du tirage encadré, réservée à la page exposition (cadre2.jpg, etc. ignorés dans les séries)
+const FRAME = /^cadre\d*\.[a-z]+$/i;
 
 export interface CartelImages {
     main?: string;
+    frame?: string;
     originals: string[];
     group: string[];
     others: string[];
@@ -28,10 +31,12 @@ export function getCartelImages(slug: string, groupPrefix?: string): CartelImage
         originalFiles.find((f) => ORIGINAL.exec(f)?.[1] === undefined);
 
     const inGroup = (f: string) => !!groupPrefix && f.toLowerCase().startsWith(groupPrefix.toLowerCase());
-    const rest = files.filter((f) => !/^origin/i.test(f)).sort(byName);
+    const frameFile = files.find((f) => f.toLowerCase() === 'cadre.jpg');
+    const rest = files.filter((f) => !/^origin/i.test(f) && !FRAME.test(f)).sort(byName);
 
     return {
         main: mainFile && url(mainFile),
+        frame: frameFile && url(frameFile),
         originals: originalFiles.filter((f) => f !== mainFile).map(url),
         group: rest.filter(inGroup).map(url),
         others: rest.filter((f) => !inGroup(f)).map(url),

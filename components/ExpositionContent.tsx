@@ -7,9 +7,12 @@ interface Card {
     slug: string;
     title: { fr: string; en: string };
     thumb?: string;
+    framed?: boolean;
 }
 
-export default function ExpositionContent({ gallery, cards }: { gallery: string[]; cards: Card[] }) {
+const PLAYLIST_URL = 'https://www.youtube.com/playlist?list=PLaPabHi3B9dQ';
+
+export default function ExpositionContent({ cards }: { cards: Card[] }) {
     const { language } = useLanguage();
     const fr = language === 'fr';
 
@@ -24,15 +27,17 @@ export default function ExpositionContent({ gallery, cards }: { gallery: string[
                         ? "Les tirages de l'exposition, et les cartels de chaque photographie."
                         : 'The prints from the exhibition, and the labels for each photograph.'}
                 </p>
+                <a
+                    href={PLAYLIST_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-cyanotype border-l-2 border-cyanotype/40 hover:border-cyanotype bg-charcoal/5 hover:bg-charcoal/10 pl-4 pr-3 py-2.5 transition-colors"
+                >
+                    {fr ? "Écouter la playlist de l'exposition" : 'Listen to the exhibition playlist'} ↗
+                </a>
             </header>
 
-            <section className="space-y-6">
-                {gallery.map((src) => (
-                    <img key={src} src={src} alt="" className="w-full h-auto bg-charcoal/5" />
-                ))}
-            </section>
-
-            <section className="mt-20 pb-20">
+            <section className="pb-20">
                 <h2 className="text-3xl font-bold text-charcoal tracking-tight mb-8">
                     {fr ? 'Les cartels' : 'Labels'}
                 </h2>
@@ -46,7 +51,7 @@ export default function ExpositionContent({ gallery, cards }: { gallery: string[
                                         alt=""
                                         loading="lazy"
                                         className="w-full h-auto bg-charcoal/5 group-hover:opacity-90 transition-opacity"
-                                        style={{ imageRendering: 'pixelated' }}
+                                        style={card.framed ? undefined : { imageRendering: 'pixelated' }}
                                     />
                                 )}
                                 <p className="mt-3 text-lg font-medium text-charcoal group-hover:underline">
