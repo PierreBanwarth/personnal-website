@@ -19,13 +19,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pierre Banwarth — Game Boy Camera Photography",
     description: "Exploring photography through Game Boy Camera: concert videos, cyanotype prints, and visual experiments.",
-    url: "https://pierrebanwarth.github.io/personnal-website/",
+    url: "https://pierrebanwarth.com/",
     type: "website",
-    images: [{ url: "https://pierrebanwarth.github.io/personnal-website/og.png", width: 1200, height: 630 }],
+    images: [{ url: "https://pierrebanwarth.com/og.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://pierrebanwarth.github.io/personnal-website/og.png"],
+    images: ["https://pierrebanwarth.com/og.png"],
   },
 };
 

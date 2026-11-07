@@ -335,6 +335,41 @@ export default function ApparatusPage() {
                 </a>
             </section>
 
+            <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-charcoal/10">
+                <h2 className="text-3xl font-bold text-charcoal tracking-tight mb-6">
+                    {fr ? 'Merci untoxa' : 'Thank you, untoxa'}
+                </h2>
+                <p className="text-lg text-charcoal/80 leading-relaxed mb-4">
+                    {fr
+                        ? "Un grand merci à untoxa pour Photo!, le homebrew qui fait tourner mon appareil, et pour le Pico GB Printer, qui permet de récupérer les photos numériquement. Deux projets open source qui changent complètement l'expérience de la Game Boy Camera."
+                        : 'A big thank you to untoxa for Photo!, the homebrew that runs my camera, and for the Pico GB Printer, which lets me retrieve photos digitally. Two open source projects that completely change the Game Boy Camera experience.'}
+                </p>
+                <a
+                    href="https://github.com/untoxa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-charcoal underline hover:text-charcoal/60"
+                >
+                    github.com/untoxa →
+                </a>
+            </section>
+
+            <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-charcoal/10">
+                <h2 className="text-3xl font-bold text-charcoal tracking-tight mb-6">
+                    {fr ? 'Merci à la communauté' : 'Thank you to the community'}
+                </h2>
+                <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
+                    {fr
+                        ? "Merci à toutes celles et ceux qui font vivre la communauté Game Boy Camera : ils partagent leurs projets, leur temps et leurs conseils, et rendent tout cela possible."
+                        : 'Thank you to everyone who keeps the Game Boy Camera community alive: they share their projects, their time and their advice, and make all of this possible.'}
+                </p>
+                <ul className="grid sm:grid-cols-2 gap-4">
+                    {sections
+                        .find((s) => s.id === 'community')
+                        ?.links?.map((l) => <ExtLink key={l.url} item={l} lang={language} />)}
+                </ul>
+            </section>
+
             <section className="bg-charcoal text-warm-white py-16 md:py-24">
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-2xl font-bold mb-4">{t('equipment.backToWorkTitle')}</h2>

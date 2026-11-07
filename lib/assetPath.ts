@@ -1,14 +1,13 @@
 /**
  * Helper function to get the correct asset path with basePath prefix
- * Used for GitHub Pages deployment where basePath is '/personnal-website'
+ * Used for deployments that may have a basePath configuration
  */
 export function assetPath(path: string): string {
-    // In Next.js with basePath, we need to prefix all asset paths
-    // This ensures images and videos load correctly on GitHub Pages
-    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '/personnal-website';
+    // Get basePath from environment variable (empty string for root domain)
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
     
-    // If the path already starts with the basePath, don't double it
-    if (path.startsWith(basePath)) {
+    // If basePath is empty or the path already starts with the basePath, return as-is
+    if (!basePath || path.startsWith(basePath)) {
         return path;
     }
     

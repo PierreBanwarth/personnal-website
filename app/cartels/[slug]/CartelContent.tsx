@@ -1,12 +1,11 @@
 'use client';
 
+import { useLanguage } from '@/app/LanguageContext';
+import { assetPath } from '@/lib/assetPath';
+import type { CartelImages } from '@/lib/cartelImages';
+import type { Cartel } from '@/lib/cartels';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useLanguage } from '@/app/LanguageContext';
-import MusicSelection from '@/components/MusicSelection';
-import { assetPath } from '@/lib/assetPath';
-import type { Cartel } from '@/lib/cartels';
-import type { CartelImages } from '@/lib/cartelImages';
 
 const pixelated = { imageRendering: 'pixelated' } as const;
 
@@ -33,24 +32,14 @@ export default function CartelContent({ cartel, images }: { cartel: Cartel; imag
                     />
                 )}
                 <h1 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">{title}</h1>
+                <p className="text-lg md:text-xl text-charcoal/80 leading-relaxed">{text}</p>
             </div>
 
             {images.main && (
-                <div className="mb-8 max-w-3xl">
+                <div className="mt-14 max-w-3xl mx-auto">
                     <img src={images.main} alt={title} className="w-full h-auto bg-charcoal/5" style={pixelated} />
                 </div>
             )}
-
-            <div className="max-w-2xl">
-                <div className="space-y-4">
-                    {text.split('\n').map((paragraph, i) => (
-                        <p key={i} className="text-lg md:text-xl text-charcoal/80 leading-relaxed">
-                            {paragraph}
-                        </p>
-                    ))}
-                </div>
-                <MusicSelection tracks={cartel.tracks} links={cartel.links} language={language} />
-            </div>
 
             {images.group.length > 0 && cartel.group && (
                 <div className="mt-16">
