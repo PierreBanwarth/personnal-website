@@ -14,7 +14,7 @@ export const translations = {
     // Homepage
     home: {
       title: 'Photograph Differently.',
-      description: 'I am a musician and have long explored traditional Irish music. I love experimenting at the intersection of music, technique, and image. With a Game Boy Camera, I explore another way to photograph concerts and transform images, from movement to physical print.',
+      description: 'I am a musician and have long explored traditional Irish music. I love experimenting at the intersection of music, technique, and image. With a Game Boy Camera, I explore another way to photograph and transform images, from movement to physical print.',
       liveVideos: 'Live Videos',
       liveVideosDesc: 'Moving image: an experience centered on motion, sequences and perception of the moment.',
       viewGallery: 'View Gallery →',
@@ -221,7 +221,7 @@ export const translations = {
     // Homepage
     home: {
       title: 'Photographier autrement.',
-      description: 'Je suis musicien depuis de nombreuses années et j\'aime expérimenter à la croisée de la musique, de la technique et de l\'image. Avec une Game Boy Camera, j\'explore une autre manière de photographier les concerts et de transformer les images, du mouvement au tirage physique.',
+      description: 'Je suis musicien depuis de nombreuses années et j\'aime expérimenter à la croisée de la musique, de la technique et de l\'image. Avec une Game Boy Camera, j\'explore une autre manière de photographier et de transformer les images, du mouvement au tirage physique.',
       liveVideos: 'Vidéos en direct',
       liveVideosDesc: 'L\'image en mouvement : une expérience centrée sur le mouvement, les séquences et la perception de l\'instant.',
       viewGallery: 'Voir la galerie →',
