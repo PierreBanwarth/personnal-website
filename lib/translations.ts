@@ -6,6 +6,7 @@ export const translations = {
     nav: {
       liveVideos: 'Live Videos',
       cyanotypes: 'Cyanotypes',
+      exposition: 'Exhibition',
       apparatus: 'The Apparatus',
       about: 'About',
       contact: 'Contact',
@@ -212,6 +213,7 @@ export const translations = {
     nav: {
       liveVideos: 'Vidéos en direct',
       cyanotypes: 'Cyanotypes',
+      exposition: 'Exposition',
       apparatus: 'L\'Appareil',
       about: 'À propos',
       contact: 'Contact',

@@ -27,6 +27,9 @@ export default function Header() {
                         <Link href="/cyanotypes" className="text-sm text-charcoal hover:text-charcoal/60 transition-colors">
                             {t('nav.cyanotypes')}
                         </Link>
+                        <Link href="/exposition" className="text-sm text-charcoal hover:text-charcoal/60 transition-colors">
+                            {t('nav.exposition')}
+                        </Link>
                         <Link href="/apparatus" className="text-sm text-charcoal hover:text-charcoal/60 transition-colors">
                             {t('nav.apparatus')}
                         </Link>
@@ -80,6 +83,9 @@ export default function Header() {
                         </Link>
                         <Link href="/cyanotypes" className="block text-charcoal hover:text-charcoal/60 transition-colors">
                             {t('nav.cyanotypes')}
+                        </Link>
+                        <Link href="/exposition" className="block text-charcoal hover:text-charcoal/60 transition-colors">
+                            {t('nav.exposition')}
                         </Link>
                         <Link href="/apparatus" className="block text-charcoal hover:text-charcoal/60 transition-colors">
                             {t('nav.apparatus')}

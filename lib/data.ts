@@ -94,6 +94,15 @@ export const liveWorks: Work[] = [
 // Cyanotypes - Static gallery with prints
 export const cyanotypeWorks: Work[] = [
     {
+        id: 'cyan-000',
+        title: '',
+        type: 'cyanotype',
+        image: assetPath('/images/cyanotypes/JLUgwY57.jpg'),
+        date: '2026',
+        technique: 'Cyanotype',
+        description: '',
+    },
+    {
         id: 'cyan-001',
         title: '',
         type: 'cyanotype',

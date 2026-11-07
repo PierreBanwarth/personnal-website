@@ -12,10 +12,12 @@ export default function MediaDisplay({ image, video, alt, className = '' }: Medi
     if (video) {
         return (
             <video
-                className={`w-full h-full object-cover ${className}`}
+                className={`w-full h-auto block ${className}`}
                 controls
+                autoPlay
                 loop
                 muted
+                playsInline
             >
                 <source src={video} type="video/mp4" />
                 Your browser does not support the video tag.

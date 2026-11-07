@@ -27,6 +27,7 @@ export const articleHeader = {
 export const stepLabel: Bi = { fr: '\u00c9tape', en: 'Step' };
 
 export const article: ArticleBlock[] = [
+    { type: 'image', index: 0 },
     {
         type: 'h2',
         text: {
@@ -48,7 +49,7 @@ export const article: ArticleBlock[] = [
             en: `This reflection takes on its full meaning with the most extreme projects, where technology seems to impose its limits. Recently, I was faced with a singular challenge: bringing to life images captured with a Game Boy Camera from the 1990s. It is through this dialogue between raw technical constraint and the alchemy of a historical process that the approach presented below was born. Proof, in blue, that the truth of a photograph lies as much in the hand that reveals it as in the eye that captured it.`,
         },
     },
-    { type: 'image', index: 0 },
+    { type: 'image', index: 1 },
 
     {
         type: 'h2',
@@ -71,7 +72,7 @@ export const article: ArticleBlock[] = [
             en: `Instead of fighting the limits of the Game Boy, I suggested to Pierre that we sublimate them with cyanotype, a historical photographic process from the 19th century. Cyanotype is known for its difficulty in rendering smooth gradients, but it excels at reproducing strong contrasts. It was the perfect setting: its shades of blue would welcome the console's four levels of grey with absolute fidelity, turning a cold computer file into an organic, material work.`,
         },
     },
-    { type: 'image', index: 1 },
+    { type: 'image', index: 2 },
 
     { type: 'h3', text: { fr: 'Un jeu d\u2019optique et de distance', en: 'A play of optics and distance' } },
     {
@@ -185,5 +186,5 @@ export const article: ArticleBlock[] = [
             en: `After a few minutes of exposure, I immerse the paper in a tub of clear water. This is the most magical moment: the chemistry that has not seen the light dissolves and washes away, while the areas struck by the sun fix and instantly turn a vibrant Prussian blue. The Game Boy's four levels of grey are now engraved in the paper's fibres.`,
         },
     },
-    { type: 'image', index: 2 },
+    { type: 'image', index: 3 },
 ];
