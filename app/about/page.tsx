@@ -61,6 +61,7 @@ export default function AboutPage() {
                 {/* Collaboration */}
                 <div className="mb-16">
                     <h2 className="text-2xl font-bold text-charcoal mb-6">{t('about.collaboration')}</h2>
+                    <h3 className="text-xl font-bold text-charcoal mb-3">Thierry Chabanis</h3>
                     <p className="text-charcoal/80 mb-4 leading-relaxed">
                         {t('about.collaborationDesc')}
                     </p>

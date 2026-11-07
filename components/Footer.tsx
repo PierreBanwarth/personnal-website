@@ -39,8 +39,9 @@ export default function Footer() {
                         <p className="text-xs text-warm-white/70">
                             {t('footer.photography')}
                         </p>
-                        <p className="text-xs text-warm-white/70">
-                            {t('footer.cyanotypes')}
+                        <p className="text-xs text-warm-white/70 mt-2">
+                            {t('footer.cyanotypes')}<br />
+                            <span className="text-sm font-semibold text-warm-white">Thierry Chabanis</span>
                         </p>
                     </div>
                 </div>

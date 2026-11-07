@@ -4,6 +4,8 @@ import { Fragment } from 'react';
 import { useLanguage } from '@/app/LanguageContext';
 import { cyanotypeWorks, photoWorks } from '@/lib/data';
 import { article, articleHeader, stepLabel } from '@/lib/cyanotypeArticle';
+import { assetPath } from '@/lib/assetPath';
+import { useT } from '@/lib/useT';
 import type { Language } from '@/lib/translations';
 
 interface Props {
@@ -29,6 +31,7 @@ function Figure({ index, language, onOpen }: { index: number; language: Language
 
 export default function CyanotypeArticle({ onOpenImage }: Props) {
     const { language } = useLanguage();
+    const t = useT();
 
     return (
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,6 +46,34 @@ export default function CyanotypeArticle({ onOpenImage }: Props) {
                     {articleHeader.byline[language]}
                 </p>
             </header>
+
+            <section aria-labelledby="collaboration-title" className="border-t-2 border-cyanotype bg-cyanotype/10 p-6 sm:p-8 md:p-10 mb-16">
+                <h2 id="collaboration-title" className="text-3xl font-bold text-charcoal tracking-tight mb-6">
+                    {t('cyanotypesEditorial.collaborationTitle')}
+                </h2>
+                <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] gap-8 md:gap-10 items-start">
+                    <div>
+                        <img
+                            src={assetPath('/images/Thierry Chabanis.jpg')}
+                            alt={t('cyanotypesEditorial.thierryPhotoAlt')}
+                            width={787}
+                            height={525}
+                            className="w-full h-auto"
+                        />
+                        <div className="mt-5 space-y-3 text-sm text-charcoal/80">
+                            <p><span className="block font-bold text-charcoal text-base">Pierre Banwarth</span>{t('cyanotypesEditorial.pierreRole')}</p>
+                            <p><span className="block font-bold text-charcoal text-base">Thierry Chabanis</span>{t('cyanotypesEditorial.thierryRole')}</p>
+                        </div>
+                    </div>
+                    <div className="space-y-4 text-charcoal/80 leading-relaxed">
+                        <p>{t('cyanotypesEditorial.thanks1')}</p>
+                        <p>{t('cyanotypesEditorial.thanks2')}</p>
+                        <p>{t('cyanotypesEditorial.thanks3')}</p>
+                        <p>{t('cyanotypesEditorial.thanks4')}</p>
+                        <p className="font-semibold text-charcoal">{t('cyanotypesEditorial.thanks5')}</p>
+                    </div>
+                </div>
+            </section>
 
             {article.map((block, i) => {
                 switch (block.type) {
