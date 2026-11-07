@@ -1,16 +1,11 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { useT } from '@/lib/useT';
 import ObfuscatedEmail from '@/components/ObfuscatedEmail';
 
 export default function Footer() {
-    const [currentYear, setCurrentYear] = useState(2026);
+    const currentYear = new Date().getFullYear();
     const t = useT();
-
-    useEffect(() => {
-        setCurrentYear(new Date().getFullYear());
-    }, []);
 
     return (
         <footer className="bg-charcoal text-warm-white mt-20">
@@ -51,7 +46,7 @@ export default function Footer() {
                 </div>
 
                 <div className="border-t border-warm-white/20 pt-8 text-xs text-warm-white/60 text-center">
-                    <p>{t('footer.copyright').replace('{year}', currentYear.toString())}</p>
+                    <p suppressHydrationWarning>{t('footer.copyright').replace('{year}', currentYear.toString())}</p>
                     <p className="mt-2">{t('footer.siteDesign')}</p>
                 </div>
             </div>

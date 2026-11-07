@@ -387,7 +387,7 @@ export const translations = {
       capabilitiesTitle: 'Ce que cette configuration permet',
       capabilitiesText: 'Photo! étend les possibilités de la Game Boy Camera originale : paramètres de capture plus accessibles, modes de prise de vue, réglages manuels, stockage et possibilités de transfert adaptées au matériel compatible. Le capteur reste celui de la Game Boy Camera d\'origine. La personnalisation se situe notamment dans l\'électronique de la cartouche, le logiciel, le boîtier et l\'optique. La monture CS et l\'objectif 2,8–12 mm participent à la réappropriation de l\'appareil comme outil photographique, en ouvrant des possibilités de cadrage et de mise au point différentes de la configuration d\'origine.',
       philosophyTitle: 'Une approche artistique',
-      philosophyText: 'Je ne présente pas cette configuration comme objectivement la meilleure, ni comme une invention personnelle. Je la présente comme mon choix d\'outil photographique, construit à partir de projets ouverts et communautaires. L\'intérêt artistique réside dans ce que je fais de cet outil : les cadrages, les lumières, les compositions, les séquences animées et les images que je choisis de transformer en impressions. La technique éclairie le regard photographique—elle ne le remplace jamais.',
+      philosophyText: 'Je ne présente pas cette configuration comme objectivement la meilleure, ni comme une invention personnelle. Je la présente comme mon choix d\'outil photographique, construit à partir de projets ouverts et communautaires. L\'intérêt artistique réside dans ce que je fais de cet outil : les cadrages, les lumières, les compositions, les séquences animées et les images que je choisis de transformer en impressions. La technique éclaire le regard photographique : elle ne le remplace jamais.',
       creditsTitle: 'Projets communautaires et contributeurs',
       creditsNote: 'Ces projets représentent une contribution significative à la communauté de la Game Boy Camera. Pierre Banwarth utilise cette configuration comme outil photographique et ne revendique pas la paternité de ces développements.',
       backToWorkTitle: 'Les photographies',
@@ -418,15 +418,3 @@ export const translations = {
 } as const;
 
 export type TranslationKey = keyof typeof translations.en;
-
-export function getTranslation(lang: Language, key: string, defaultValue: string = ''): string {
-  const keys = key.split('.');
-  let value: any = translations[lang];
-
-  for (const k of keys) {
-    value = value?.[k];
-    if (!value) return defaultValue;
-  }
-
-  return typeof value === 'string' ? value : defaultValue;
-}

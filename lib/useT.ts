@@ -5,10 +5,11 @@ import { useLanguage } from '@/app/LanguageContext';
 
 export function t(language: Language, path: string): string {
   const keys = path.split('.');
-  let value: any = translations[language];
+  let value: unknown = translations[language];
 
   for (const key of keys) {
-    value = value?.[key];
+    if (typeof value !== 'object' || value === null) return path;
+    value = (value as Record<string, unknown>)[key];
     if (!value) return path;
   }
 

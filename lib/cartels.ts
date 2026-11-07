@@ -45,7 +45,7 @@ export const cartels: Cartel[] = [
     {
         slug: 'kilian-flatot',
         title: 'Kilian Flatot',
-        text: "Portrait d'un ami de longue date pendant son passage a la scène ouverte de la Fete de l'accordéon de Luzy",
+        text: "Portrait d'un ami de longue date pendant son passage à la scène ouverte de la Fête de l'accordéon de Luzy",
         series: { fr: "Photos de la Fête de l'accordéon de Luzy", en: "Photos from the Fête de l'accordéon in Luzy" },
         en: {
             title: 'Kilian Flatot',
@@ -65,7 +65,7 @@ export const cartels: Cartel[] = [
     {
         slug: 'liam-roudil',
         title: 'Liam Roudil',
-        text: 'Liam Roudil guitariste talentueux et ami proche une de mes premiere photo réalisée pendant une session de musique irlandaise',
+        text: 'Liam Roudil, guitariste talentueux et ami proche. Une de mes premières photos, réalisée pendant une session de musique irlandaise',
         series: { fr: 'Photos de copains en session', en: 'Friends at sessions' },
         group: {
             prefix: 'fraude',
@@ -85,7 +85,7 @@ export const cartels: Cartel[] = [
     {
         slug: 'maxime-barbeau',
         title: 'Maxime Barbeau',
-        text: 'Doigt levé surement pour donner un avis hyper eclairé sur un sujet hyper chelou',
+        text: 'Doigt levé, sûrement pour donner un avis hyper éclairé sur un sujet hyper chelou',
         series: { fr: "Photos de la Fête de l'accordéon de Luzy", en: "Photos from the Fête de l'accordéon in Luzy" },
         en: {
             title: 'Maxime Barbeau',
@@ -94,8 +94,8 @@ export const cartels: Cartel[] = [
     },
     {
         slug: 'camille-a-la-plage',
-        title: 'Camille a la plage',
-        text: 'Un des premier cliché réalisé pendant une sortie a la plage avec ma merveilleuse femme',
+        title: 'Camille à la plage',
+        text: 'Un des premiers clichés réalisés pendant une sortie à la plage avec ma merveilleuse femme',
         series: { fr: 'Camille en photos', en: 'Camille in photos' },
         en: {
             title: 'Camille at the beach',
@@ -105,7 +105,7 @@ export const cartels: Cartel[] = [
     {
         slug: 'fest-noz',
         title: 'Fest Noz',
-        text: 'Fest Noz de rentré le duo Garan Lintanf fait danser la',
+        text: 'Fest Noz de rentrée, le duo Garan Lintanf fait danser la salle',
         originalsTitle: { fr: 'Le duo Garan Lintanf', en: 'The duo Garan Lintanf' },
         series: {
             fr: 'Les autres artistes du Fest Noz de la Harpe',
@@ -113,13 +113,13 @@ export const cartels: Cartel[] = [
         },
         en: {
             title: 'Fest Noz',
-            text: 'Back-to-school Fest Noz, the duo Garan Lintanf gets the',
+            text: 'Back-to-school Fest Noz, the duo Garan Lintanf gets the room dancing',
         },
     },
     {
         slug: 'manege',
-        title: 'Manege',
-        text: 'Manege de la place sainte annes a Rennes bonne musique et possibilité de chevaucher un hyppocampe',
+        title: 'Manège',
+        text: 'Manège de la place Sainte-Anne à Rennes, bonne musique et possibilité de chevaucher un hippocampe',
         en: {
             title: 'Carousel',
             text: 'Carousel on Place Sainte-Anne in Rennes. Good music and the chance to ride a seahorse',
@@ -128,7 +128,7 @@ export const cartels: Cartel[] = [
     {
         slug: 'jolivet',
         title: 'Jolivet',
-        text: "Gregory Jolivet membre du duo longskateur sur la scène de la Fete de l'accordéon",
+        text: "Gregory Jolivet, membre du duo Longskateur, sur la scène de la Fête de l'accordéon",
         series: { fr: "Photos de la Fête de l'accordéon de Luzy", en: "Photos from the Fête de l'accordéon in Luzy" },
         en: {
             title: 'Jolivet',
@@ -138,7 +138,7 @@ export const cartels: Cartel[] = [
     {
         slug: 'session-girls',
         title: 'Session Girls',
-        text: "Photo prise au festival de musique irlandaise de Mesquer. Servane Aline et Ghita trois copines. Je trouve que cette photo retranscrit particulierement bien l'ambiance des sessions.",
+        text: "Photo prise au festival de musique irlandaise de Mesquer. Servane, Aline et Ghita, trois copines. Je trouve que cette photo retranscrit particulièrement bien l'ambiance des sessions.",
         group: {
             prefix: 'girls',
             title: { fr: 'Portrait de musiciennes', en: 'Portraits of women musicians' },

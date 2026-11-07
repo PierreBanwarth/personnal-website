@@ -322,8 +322,8 @@ export default function ApparatusPage() {
                 </h2>
                 <p className="text-lg text-charcoal/80 leading-relaxed mb-4">
                     {fr
-                        ? "Un grand merci à Raphaël Boichot pour ses conseils, par mail et via son dépôt. Il m'a fourni une cartouche modifiée, déjà imprimée, avec un PCB custom à l'intérieur, ainsi que des PCB pour réaliser un TinyGB Printer et un Pico GB Printer."
-                        : 'A big thank you to Raphaël Boichot for his advice, by email and through his repository. He provided a modded cartridge, already printed, with a custom PCB inside, along with PCBs to build a TinyGB Printer and a Pico GB Printer.'}
+                        ? "Un grand merci à Raphaël Boichot pour son travail de documentation, ses développements autour de la Game Boy Camera et sa disponibilité. Ses projets open source m'ont permis de découvrir cet univers, de bricoler mon propre matériel et d'explorer de nouvelles possibilités photographiques. Sans ses contributions et ses conseils, cette aventure aurait certainement pris un tout autre chemin."
+                        : 'A big thank you to Raphaël Boichot for his documentation work, his developments around the Game Boy Camera and his availability. His open source projects let me discover this world, tinker with my own hardware and explore new photographic possibilities. Without his contributions and advice, this adventure would certainly have taken a very different path.'}
                 </p>
                 <a
                     href="https://github.com/Raphael-Boichot/Awesome-Game-Boy-Camera-and-Game-Boy-Printer-projects"
