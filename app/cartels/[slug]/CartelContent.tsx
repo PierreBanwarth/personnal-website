@@ -4,6 +4,7 @@ import { useLanguage } from '@/app/LanguageContext';
 import { assetPath } from '@/lib/assetPath';
 import type { CartelImages } from '@/lib/cartelImages';
 import type { Cartel } from '@/lib/cartels';
+import MusicSelection from '@/components/MusicSelection';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -18,8 +19,8 @@ export default function CartelContent({ cartel, images }: { cartel: Cartel; imag
     const originalsTitle = cartel.originalsTitle ? cartel.originalsTitle[language] : fr ? 'Les originaux' : 'The originals';
 
     return (
-        <section className="max-w-5xl mx-auto px-6 py-12 md:py-20">
-            <div className="max-w-2xl">
+        <section className="max-w-5xl xl:max-w-6xl mx-auto px-6 py-12 md:py-20">
+            <div className="max-w-2xl xl:max-w-3xl">
                 {cartel.image && (
                     <Image
                         src={assetPath(cartel.image)}
@@ -33,10 +34,11 @@ export default function CartelContent({ cartel, images }: { cartel: Cartel; imag
                 )}
                 <h1 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">{title}</h1>
                 <p className="text-lg md:text-xl text-charcoal/80 leading-relaxed">{text}</p>
+                <MusicSelection tracks={cartel.tracks} links={cartel.links} language={language} />
             </div>
 
             {images.main && (
-                <div className="mt-14 max-w-3xl mx-auto">
+                <div className="mt-14 max-w-3xl xl:max-w-4xl mx-auto">
                     <img src={images.main} alt={title} className="w-full h-auto bg-charcoal/5" style={pixelated} />
                 </div>
             )}
@@ -47,7 +49,7 @@ export default function CartelContent({ cartel, images }: { cartel: Cartel; imag
                         {cartel.group.title[language]}
                     </h2>
                     {cartel.group.quote && (
-                        <blockquote className="mb-8 max-w-2xl border-l-2 border-cyanotype pl-5 space-y-3 text-charcoal/80">
+                        <blockquote className="mb-8 max-w-2xl xl:max-w-3xl border-l-2 border-cyanotype pl-5 space-y-3 text-charcoal/80">
                             {cartel.group.quote[language].split('\n').map((paragraph, i, all) => (
                                 <p key={i} className="text-lg leading-relaxed">
                                     {i === 0 && (fr ? '«\u00a0' : '“')}

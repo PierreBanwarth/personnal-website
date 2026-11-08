@@ -7,7 +7,7 @@ export interface CartelText {
 export interface CartelTrack {
     artist?: string;
     title?: string;
-    url: string;
+    url?: string;
 }
 
 // Lien externe vers autre chose qu'un morceau (ex. page d'un groupe)
@@ -75,8 +75,8 @@ export const cartels: Cartel[] = [
             },
         ],
         tracks: [
-            { artist: 'Sébastien Lagrange & Gaël Rutkowski', url: 'https://youtu.be/0rMBZeiS_88' },
-            { artist: 'Gallica', url: 'https://youtu.be/HpST3itrBRs' },
+            { artist: 'Seb Lagrange & Gaël Rutkowski', url: 'https://youtu.be/0rMBZeiS_88' },
+            { artist: 'Galica', url: 'https://youtu.be/HpST3itrBRs' },
             { artist: 'Matawa', url: 'https://youtu.be/tYlnvmwbstg' },
         ],
         series: { fr: "Photos de la Fête de l'accordéon de Luzy", en: "Photos from the Fête de l'accordéon in Luzy" },
@@ -90,11 +90,12 @@ export const cartels: Cartel[] = [
         title: 'Julien Padovani',
         text: "Julien Padovani, charismatique, pendant le bal du Grand Barouf au festival Fisel. On y retrouve Grégory Jolivet, également présent dans cette exposition. Comme quoi, le monde est petit !\nJulien est une véritable source d'inspiration et participe activement au renouveau des musiques traditionnelles.",
         tracks: [
-            { artist: 'Ciac Boum', url: 'https://youtu.be/shPmNKOyfEg' },
+            { artist: 'Ciac Boom', url: 'https://youtu.be/shPmNKOyfEg' },
             { artist: 'Osso', url: 'https://youtu.be/-6MqyLmTmnc' },
             { artist: 'Fall Foen', url: 'https://youtu.be/STeHIdIZu-s' },
             { artist: 'Startijenn', url: 'https://youtu.be/bMbhRGeBGuA' },
             { artist: 'Le Grand Barouf', url: 'https://youtu.be/7zDVP0kZREc' },
+            { artist: 'Jeanne Le Moine' },
         ],
         series: { fr: 'Photos du festival Fisel', en: 'Photos from the Fisel festival' },
         en: {
@@ -131,9 +132,9 @@ export const cartels: Cartel[] = [
         title: 'Maxime Barbeau',
         text: "Doigt levé, sûrement pour donner un avis hyper éclairé sur un sujet étrange.\nFan de Buffy et de Pelicase, Maxime est un précieux ami de buvette ! Demandez-lui d'où lui viennent ses ciseaux rouges et vous passerez un bon moment.\nAvec Ma Petite, il a contribué à faire évoluer la manière dont certains groupes abordent l'arrangement et le chant traditionnel.\nUn artiste autant sur scène qu'à la buvette !",
         tracks: [
-            { artist: 'Ma Petite', url: 'https://youtu.be/4XKq94UeSFw' },
+            { artist: 'Ma petite', url: 'https://youtu.be/4XKq94UeSFw' },
             { artist: 'Framboyan', url: 'https://youtu.be/e2rKOUqrvAQ' },
-            { artist: 'Sérac', url: 'https://youtu.be/j2OzSFxkwCo' },
+            { artist: 'Serac', url: 'https://youtu.be/j2OzSFxkwCo' },
         ],
         series: { fr: "Photos de la Fête de l'accordéon de Luzy", en: "Photos from the Fête de l'accordéon in Luzy" },
         en: {
@@ -145,7 +146,7 @@ export const cartels: Cartel[] = [
         slug: 'camille-a-la-plage',
         title: 'Camille à la plage',
         text: "Un des premiers clichés réalisés pendant une sortie à la plage avec ma merveilleuse femme.\nLa série associée présente les nombreux tests effectués avec son aide, ainsi que des souvenirs de nos trop rares vadrouilles ensemble.",
-        tracks: [{ title: 'Where Is My Husband?', url: 'https://youtu.be/rK5TyISxZ_M' }],
+        tracks: [{ title: 'where is my husband', url: 'https://youtu.be/rK5TyISxZ_M' }],
         series: { fr: 'Camille en photos', en: 'Camille in photos' },
         en: {
             title: 'Camille at the beach',
@@ -160,7 +161,7 @@ export const cartels: Cartel[] = [
             { title: 'Kan ha diskan', url: 'https://youtu.be/j_7AsE5o1a4' },
             { artist: 'Litha', url: 'https://youtu.be/EPTzjddJXUM' },
             { artist: 'Barou Pelen', url: 'https://youtu.be/YjwyzG4sJgE' },
-            { artist: 'Ampouailh', url: 'https://youtu.be/6OJvtjm2tBc' },
+            { artist: 'Ampouaillh', url: 'https://youtu.be/6OJvtjm2tBc' },
         ],
         originalsTitle: { fr: 'Le duo Garan Lintanf', en: 'The duo Garan Lintanf' },
         series: {
@@ -183,21 +184,21 @@ export const cartels: Cartel[] = [
     },
     {
         slug: 'jolivet',
-        title: 'Jolivet',
-        text: "Dans le monde foisonnant de la vielle à roue, certains musiciens, par leur personnalité et leur style de jeu, font évoluer l'instrument et le propulsent dans le XXIe siècle.\nValentin Clastrier fut l'un des premiers à bousculer le monde de la vielle à roue. Grégory Jolivet en prolonge aujourd'hui le lumineux chemin musical.\nQuelques questions au vielleux sur sa musique et ses luthiers.",
+        title: 'Grégory Jolivet',
+        text: "Dans le monde foisonnant de la vielle à roue, certains musiciens, par leur personnalité et leur style de jeu, font évoluer l'instrument et le propulsent dans le XXIe siècle.\nValentin Clastrier fut l'un des premiers à bousculer le monde de la vielle à roue. Grégory Jolivet en prolonge aujourd'hui le lumineux chemin musical.\nLe duo Longskaters réunit Grégory Jolivet à la vielle alto électroacoustique et David Lecrot aux accordéons diatoniques.",
         tracks: [
-            { artist: 'Longskateurs', url: 'https://youtu.be/R5vcrw14uM0' },
+            { artist: 'Longskater', url: 'https://youtu.be/R5vcrw14uM0' },
             { title: 'La Machine', url: 'https://youtu.be/605thscHvtM' },
         ],
         series: { fr: "Photos de la Fête de l'accordéon de Luzy", en: "Photos from the Fête de l'accordéon in Luzy" },
         en: {
-            title: 'Jolivet',
-            text: "In the teeming world of the hurdy-gurdy, some musicians, through their personality and playing style, make the instrument evolve and propel it into the 21st century.\nValentin Clastrier was one of the first to shake up the world of the hurdy-gurdy. Grégory Jolivet carries on its luminous musical path today.\nA few questions for the hurdy-gurdy player about his music and his instrument makers.",
+            title: 'Grégory Jolivet',
+            text: "In the teeming world of the hurdy-gurdy, some musicians, through their personality and playing style, make the instrument evolve and propel it into the 21st century.\nValentin Clastrier was one of the first to shake up the world of the hurdy-gurdy. Grégory Jolivet carries on its luminous musical path today.\nThe Longskaters duo brings together Grégory Jolivet on electroacoustic alto hurdy-gurdy and David Lecrot on diatonic accordions.",
         },
     },
     {
         slug: 'session-girls',
-        title: 'Session Girls',
+        title: 'Mesquer',
         text: "Photographie prise pendant la session de Mesquer, où la priorité était donnée aux musiciennes.\nCette image représente bien l'ambiance des sessions. Et si elle permet aussi de mettre en avant la place des femmes dans la musique, c'est encore mieux.\nEn triant mes photographies, je me suis rendu compte que, photographiant majoritairement des scènes, les femmes y sont finalement assez peu représentées, hormis les chanteuses.\nAlors, encouragez les filles de votre entourage à venir boire des coups au pub et à participer aux sessions. Et encouragez aussi les garçons à leur laisser la place et à les laisser jouer tranquillement !",
         tracks: [
             { url: 'https://youtu.be/pDy0-8OnXYk?si=F9SltXq14wkb6RII' },
@@ -209,7 +210,7 @@ export const cartels: Cartel[] = [
             title: { fr: 'Portrait de musiciennes', en: 'Portraits of women musicians' },
         },
         en: {
-            title: 'Session Girls',
+            title: 'Mesquer',
             text: "Photograph taken during the Mesquer session, where priority was given to women musicians.\nThis image captures the atmosphere of the sessions well. And if it also highlights the place of women in music, even better.\nWhile sorting through my photographs, I realised that, since I mostly photograph stages, women are actually fairly under-represented in them, apart from the singers.\nSo encourage the girls around you to come and have a drink at the pub and to take part in the sessions. And encourage the boys to make room for them and let them play in peace!",
         },
     },

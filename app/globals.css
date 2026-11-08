@@ -27,6 +27,17 @@ body {
   line-height: 1.6;
 }
 
+@media (min-width: 1280px) {
+  p {
+    text-align: justify;
+  }
+
+  .text-center p,
+  p.text-center {
+    text-align: center;
+  }
+}
+
 img {
   display: block;
   max-width: 100%;

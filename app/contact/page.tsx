@@ -40,15 +40,15 @@ export default function ContactPage() {
     return (
         <div className="bg-warm-white min-h-screen">
             {/* Header */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+            <section className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
                 <h1 className="text-4xl md:text-5xl font-bold text-charcoal mb-6">{t('contact.title')}</h1>
-                <p className="text-lg text-charcoal/70 max-w-3xl">
+                <p className="text-lg text-charcoal/70 max-w-3xl xl:max-w-4xl">
                     {t('contact.description')}
                 </p>
             </section>
 
             {/* Contact Content */}
-            <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+            <section className="max-w-3xl xl:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
                 <div className="grid md:grid-cols-2 gap-12">
                     {/* Contact Info */}
                     <div>
@@ -197,7 +197,7 @@ export default function ContactPage() {
 
             {/* Additional Info Section */}
             <section className="bg-charcoal text-warm-white py-16 md:py-24">
-                <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div className="max-w-3xl xl:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-2xl font-bold mb-4">{t('contact.followTitle')}</h2>
                     <p className="text-warm-white/80 mb-6">
                         {t('contact.followText')}

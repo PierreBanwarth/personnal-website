@@ -11,24 +11,24 @@ export default function Home() {
   return (
     <div className="bg-warm-white">
       {/* Hero Section - Editorial */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-32">
-        <div className="max-w-3xl">
+      <section className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-32">
+        <div className="max-w-3xl xl:max-w-4xl">
           <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-8 leading-tight">
             {t('home.title')}
           </h1>
-          <p className="text-lg text-charcoal/75 leading-relaxed max-w-2xl">
+          <p className="text-lg text-charcoal/75 leading-relaxed max-w-2xl xl:max-w-3xl">
             {t('home.description')}
           </p>
         </div>
       </section>
 
       {/* Featured Photo Carousel */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+      <section className="max-w-4xl xl:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
         <PhotoCarousel works={photoWorks} />
       </section>
 
       {/* Two Main Projects */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <section className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div className="grid md:grid-cols-2 gap-16 mb-24">
           {/* Live Images */}
           <div>
@@ -61,7 +61,7 @@ export default function Home() {
 
         {/* Brief About Section */}
         <div className="border-t border-charcoal/10 pt-16 md:pt-24">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl xl:max-w-4xl">
             <h2 className="text-2xl font-bold text-charcoal mb-6">{t('home.aboutBrief')}</h2>
             <p className="text-charcoal/70 mb-8 leading-relaxed">
               {t('home.aboutBriefText')}
@@ -75,7 +75,7 @@ export default function Home() {
 
       {/* Contact Section */}
       <section className="bg-charcoal text-warm-white py-16 md:py-24 mt-24">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-3xl xl:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold mb-4">{t('home.contactCTA')}</h2>
           <p className="text-warm-white/80 mb-8">
             {t('home.contactCTADesc')}
@@ -90,7 +90,7 @@ export default function Home() {
       </section>
 
       {/* Instagram Section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+      <section className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
         <p className="text-charcoal/70 mb-4">{t('home.followUpdates')}</p>
         <a
           href="https://instagram.com/pierre_banwarth"

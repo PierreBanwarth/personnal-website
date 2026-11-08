@@ -36,21 +36,21 @@ export default function LiveImagesPage() {
     return (
         <div className="bg-warm-white min-h-screen">
             {/* Header */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+            <section className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
                 <h1 className="text-6xl md:text-7xl font-bold text-charcoal leading-tight mb-16">
                     {t('liveImages.title')}
                 </h1>
             </section>
 
             {featured && (
-                <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <section className="max-w-4xl xl:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     {renderWork(featured)}
                 </section>
             )}
 
             {/* Editorial Text Section */}
-            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-                <div className="max-w-3xl space-y-6">
+            <section className="max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+                <div className="max-w-3xl xl:max-w-4xl space-y-6">
                     <p className="text-lg leading-relaxed text-charcoal/75 font-light">
                         {t('liveImages.artisticText1')}
                     </p>
@@ -67,7 +67,7 @@ export default function LiveImagesPage() {
             </section>
 
             {/* Gallery Grid */}
-            <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+            <section className="max-w-4xl xl:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
                 <div className="flex flex-col gap-16">
                     {others.map(renderWork)}
                 </div>
@@ -75,7 +75,7 @@ export default function LiveImagesPage() {
 
             {/* Call to action */}
             <section className="bg-charcoal text-warm-white py-16 md:py-24">
-                <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div className="max-w-3xl xl:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-2xl font-bold mb-4">{t('liveVideos.interested')}</h2>
                     <p className="text-warm-white/80 mb-8">
                         {t('liveVideos.interestedDesc')}

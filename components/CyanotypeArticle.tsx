@@ -34,12 +34,12 @@ export default function CyanotypeArticle({ onOpenImage }: Props) {
     const t = useT();
 
     return (
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <header className="pt-16 md:pt-24 pb-12 md:pb-16 space-y-4">
                 <h1 className="text-5xl md:text-7xl font-bold text-charcoal leading-tight">
                     {articleHeader.title[language]}
                 </h1>
-                <p className="text-xl md:text-2xl text-charcoal/75 font-light max-w-3xl">
+                <p className="text-xl md:text-2xl text-charcoal/75 font-light max-w-3xl xl:max-w-4xl">
                     {articleHeader.subtitle[language]}
                 </p>
                 <p className="text-xs uppercase tracking-widest text-charcoal/60 font-semibold">
@@ -79,19 +79,19 @@ export default function CyanotypeArticle({ onOpenImage }: Props) {
                 switch (block.type) {
                     case 'h2':
                         return (
-                            <h2 key={i} className="text-3xl font-bold text-charcoal tracking-tight mt-20 mb-8 max-w-3xl">
+                            <h2 key={i} className="text-3xl font-bold text-charcoal tracking-tight mt-20 mb-8 max-w-3xl xl:max-w-4xl">
                                 {block.text[language]}
                             </h2>
                         );
                     case 'h3':
                         return (
-                            <h3 key={i} className="text-xl font-bold text-charcoal mt-10 mb-3 max-w-2xl">
+                            <h3 key={i} className="text-xl font-bold text-charcoal mt-10 mb-3 max-w-2xl xl:max-w-3xl">
                                 {block.text[language]}
                             </h3>
                         );
                     case 'p':
                         return (
-                            <p key={i} className="text-lg leading-relaxed text-charcoal/75 font-light max-w-2xl mb-6">
+                            <p key={i} className="text-lg leading-relaxed text-charcoal/75 font-light max-w-2xl xl:max-w-3xl mb-6">
                                 {block.text[language]}
                             </p>
                         );

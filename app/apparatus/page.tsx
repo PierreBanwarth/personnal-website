@@ -268,20 +268,20 @@ export default function ApparatusPage() {
 
     return (
         <div className="bg-warm-white min-h-screen">
-            <header className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 md:pt-24 pb-12 space-y-4">
+            <header className="max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 md:pt-24 pb-12 space-y-4">
                 <h1 className="text-5xl md:text-7xl font-bold text-charcoal leading-tight">{t('equipment.title')}</h1>
-                <p className="text-xl text-charcoal/75 font-light max-w-3xl">{t('equipment.subtitle')}</p>
-                <p className="text-lg text-charcoal/80 leading-relaxed max-w-3xl">{t('equipment.description')}</p>
+                <p className="text-xl text-charcoal/75 font-light max-w-3xl xl:max-w-4xl">{t('equipment.subtitle')}</p>
+                <p className="text-lg text-charcoal/80 leading-relaxed max-w-3xl xl:max-w-4xl">{t('equipment.description')}</p>
             </header>
 
             {sections.map((section) => (
                 <section
                     key={section.id}
                     id={section.id}
-                    className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-charcoal/10"
+                    className="max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-charcoal/10"
                 >
                     <h2 className="text-3xl font-bold text-charcoal tracking-tight mb-6">{section.title[language]}</h2>
-                    <div className="max-w-3xl space-y-4 mb-8">
+                    <div className="max-w-3xl xl:max-w-4xl space-y-4 mb-8">
                         {section.text.map((p, i) => (
                             <p key={i} className="text-lg text-charcoal/80 leading-relaxed">
                                 {p[language]}
@@ -316,7 +316,7 @@ export default function ApparatusPage() {
                 </section>
             ))}
 
-            <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-charcoal/10">
+            <section className="max-w-3xl xl:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-charcoal/10">
                 <h2 className="text-3xl font-bold text-charcoal tracking-tight mb-6">
                     {fr ? 'Merci Raphaël Boichot' : 'Thank you, Raphaël Boichot'}
                 </h2>
@@ -335,7 +335,7 @@ export default function ApparatusPage() {
                 </a>
             </section>
 
-            <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-charcoal/10">
+            <section className="max-w-3xl xl:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-charcoal/10">
                 <h2 className="text-3xl font-bold text-charcoal tracking-tight mb-6">
                     {fr ? 'Merci untoxa' : 'Thank you, untoxa'}
                 </h2>
@@ -354,7 +354,7 @@ export default function ApparatusPage() {
                 </a>
             </section>
 
-            <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-charcoal/10">
+            <section className="max-w-3xl xl:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-charcoal/10">
                 <h2 className="text-3xl font-bold text-charcoal tracking-tight mb-6">
                     {fr ? 'Merci à la communauté' : 'Thank you to the community'}
                 </h2>
@@ -371,7 +371,7 @@ export default function ApparatusPage() {
             </section>
 
             <section className="bg-charcoal text-warm-white py-16 md:py-24">
-                <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div className="max-w-3xl xl:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-2xl font-bold mb-4">{t('equipment.backToWorkTitle')}</h2>
                     <p className="text-warm-white/80 mb-8">{t('equipment.backToWorkText')}</p>
                     <Link

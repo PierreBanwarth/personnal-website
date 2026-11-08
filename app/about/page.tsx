@@ -8,12 +8,12 @@ export default function AboutPage() {
     return (
         <div className="bg-warm-white min-h-screen">
             {/* Header */}
-            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+            <section className="max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
                 <h1 className="text-4xl md:text-5xl font-bold text-charcoal mb-12">{t('about.title')}</h1>
             </section>
 
             {/* Main Content */}
-            <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+            <section className="max-w-3xl xl:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
                 {/* Biography Section */}
                 <div className="mb-16 pb-16 border-b border-charcoal/10">
                     <h2 className="text-2xl font-bold text-charcoal mb-6">{t('about.biography')}</h2>
@@ -87,7 +87,7 @@ export default function AboutPage() {
 
             {/* Instagram Section */}
             <section className="bg-cyanotype/10 border-t-2 border-cyanotype py-16 md:py-24">
-                <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div className="max-w-3xl xl:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <p className="text-charcoal/70 mb-4">{t('home.followUpdates')}</p>
                     <a
                         href="https://instagram.com/pierre_banwarth"

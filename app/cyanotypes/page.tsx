@@ -63,8 +63,8 @@ export default function CyanotypesPage() {
 
             {/* Credits Section */}
             <section className="border-t border-charcoal/10 py-12 md:py-16 mt-16">
-                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="max-w-2xl space-y-2 text-sm text-charcoal/60 font-light">
+                <div className="max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-2xl xl:max-w-3xl space-y-2 text-sm text-charcoal/60 font-light">
                         <p>{t('cyanotypesEditorial.creditsPhotography')}</p>
                         <p>{t('cyanotypesEditorial.creditsAuthor')}</p>
                         <p>{t('cyanotypesEditorial.creditsCollaboration')}</p>
@@ -74,7 +74,7 @@ export default function CyanotypesPage() {
 
             {/* Contact Section */}
             <section className="bg-charcoal text-warm-white py-16 md:py-24">
-                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div className="max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <p className="text-sm uppercase tracking-widest text-warm-white/70 mb-4 font-semibold">
                         {t('cyanotypes.collabEyebrow')}
                     </p>

@@ -17,12 +17,12 @@ export default function ExpositionContent({ cards }: { cards: Card[] }) {
     const fr = language === 'fr';
 
     return (
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <header className="pt-16 md:pt-24 pb-12 space-y-4">
                 <h1 className="text-5xl md:text-7xl font-bold text-charcoal leading-tight">
                     {fr ? 'Exposition' : 'Exhibition'}
                 </h1>
-                <p className="text-xl text-charcoal/75 font-light max-w-3xl">
+                <p className="text-xl text-charcoal/75 font-light max-w-3xl xl:max-w-4xl">
                     {fr
                         ? "Les tirages de l'exposition, et les cartels de chaque photographie."
                         : 'The prints from the exhibition, and the labels for each photograph.'}
@@ -41,7 +41,7 @@ export default function ExpositionContent({ cards }: { cards: Card[] }) {
                 <h2 className="text-3xl font-bold text-charcoal tracking-tight mb-8">
                     {fr ? 'Les cartels' : 'Labels'}
                 </h2>
-                <ul className="max-w-3xl mx-auto space-y-12">
+                <ul className="max-w-3xl xl:max-w-4xl mx-auto space-y-12">
                     {cards.map((card) => (
                         <li key={card.slug}>
                             <Link href={`/cartels/${card.slug}`} className="block group">
