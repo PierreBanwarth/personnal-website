@@ -18,22 +18,30 @@ interface LinkItem {
     desc?: Bi;
 }
 
+interface Acknowledgement {
+    name: string;
+    text: Bi;
+    link: Pick<LinkItem, 'label' | 'url'>;
+}
+
 interface Section {
     id: string;
     title: Bi;
     text: Bi[];
     photos: Photo[];
     links?: LinkItem[];
+    acknowledgements?: Acknowledgement[];
+    closingThanks?: Bi;
 }
 
 const sections: Section[] = [
     {
         id: 'consoles',
-        title: { fr: 'Les deux Game Boy', en: 'The two Game Boys' },
+        title: { fr: 'Les appareils que j’utilise', en: 'The cameras I use' },
         text: [
             {
-                fr: "Deux Game Boy servent principalement à photographier. La Game Boy Color est la plus complète : c'est elle qui reçoit le plus de modifications. Le reste de la famille suit.",
-                en: 'Two Game Boys do most of the shooting. The Game Boy Color is the more complete one and receives most of the modifications. The rest of the family follows.',
+                fr: "J’utilise surtout deux Game Boy pour photographier. La Color est devenue la plus complète et celle que j’ai le plus modifiée. Les autres membres de la famille ont aussi droit à leur tour.",
+                en: 'I mostly shoot with two Game Boys. The Color has become the most complete and most modified one. The rest of the family still gets a turn.',
             },
         ],
         photos: [
@@ -56,11 +64,11 @@ const sections: Section[] = [
     },
     {
         id: 'shell',
-        title: { fr: 'Le capteur, la coque et l\u2019objectif', en: 'Sensor, shell and lens' },
+        title: { fr: 'Garder le capteur d’origine', en: 'Keeping the original sensor' },
         text: [
             {
-                fr: "Le capteur reste celui de la Game Boy Camera d'origine (Mitsubishi M64282FP). Il est transféré dans une coque neuve, la Camera+, accompagné d'une bague qui permet de fixer un objectif à monture CS (2,8\u201312 mm).",
-                en: 'The sensor remains the original Game Boy Camera one (Mitsubishi M64282FP). It is moved into a new shell, the Camera+, along with a ring that holds a CS-mount lens (2.8\u201312 mm).',
+                fr: "J’ai conservé le capteur Mitsubishi d’origine et l’ai installé dans une coque Camera+, avec une bague d’adaptation pour monture CS et un objectif 2,8–12 mm. Cette configuration ouvre de nouvelles possibilités de cadrage tout en gardant le capteur d’origine au cœur de l’appareil.",
+                en: 'I kept the original Mitsubishi sensor and moved it into a Camera+ shell, fitted with a CS-mount adapter and a 2.8–12 mm lens. It opens up new framing and photographic possibilities while keeping the original sensor at the heart of the camera.',
             },
         ],
         photos: [
@@ -87,11 +95,11 @@ const sections: Section[] = [
     },
     {
         id: 'supports',
-        title: { fr: 'Supports et impressions 3D', en: 'Supports and 3D printing' },
+        title: { fr: 'Adapter l’ensemble', en: 'Making things fit' },
         text: [
             {
-                fr: "Quelques pièces imprimées en 3D complètent l'ensemble, dont une base qui accueille un support de trépied. Pour poser une Game Boy et la tenir en place, il existe aussi des cradles.",
-                en: 'A few 3D printed parts complete the setup, including a base that carries a tripod mount. To hold a Game Boy in place, there are also cradles.',
+                fr: "Quelques pièces de l’installation sont imprimées en 3D : des supports pour les appareils, des berceaux et une base avec une fixation pour trépied. Rien de très sophistiqué : juste des adaptations utiles pour rendre l’appareil plus facile à manipuler et à utiliser.",
+                en: 'Some parts of the setup are 3D printed: camera supports, cradles and a base with a tripod mount. Nothing particularly sophisticated, just useful adaptations that make the camera easier to handle and use.',
             },
         ],
         photos: [
@@ -117,11 +125,19 @@ const sections: Section[] = [
     },
     {
         id: 'cartridge',
-        title: { fr: 'La cartouche', en: 'The cartridge' },
+        title: { fr: 'Une nouvelle cartouche', en: 'A new cartridge' },
         text: [
             {
-                fr: "La cartouche d'origine est remplacée par un PCB custom, la Game Boy Mini Flashable Camera, qui accueille le homebrew Photo! (untoxa). Photo! élargit les possibilités de la Game Boy Camera : réglages de capture plus accessibles, modes de prise de vue, contrôles manuels, stockage et transfert. FlashGBX permet de lire les sauvegardes, d'exporter les photos et de mettre à jour le firmware.",
-                en: 'The original cartridge is replaced by a custom PCB, the Game Boy Mini Flashable Camera, which runs the Photo! homebrew (untoxa). Photo! extends the Game Boy Camera: more accessible capture settings, shooting modes, manual controls, storage and transfer. FlashGBX reads the saves, exports the photos and updates the firmware.',
+                fr: "J’ai remplacé la cartouche d’origine par la Game Boy Mini Flashable Camera, un PCB qui fait tourner Photo! d’untoxa.",
+                en: 'I replaced the original cartridge with a Game Boy Mini Flashable Camera PCB, running Photo! by untoxa.',
+            },
+            {
+                fr: "Ce logiciel homebrew va plus loin que la Game Boy Camera d’origine : il ajoute des modes de prise de vue, des réglages manuels et un meilleur contrôle du stockage des images.",
+                en: 'This homebrew software takes the original Game Boy Camera further, with additional shooting modes, manual settings and more control over image storage.',
+            },
+            {
+                fr: 'J’utilise FlashGBX pour gérer la cartouche, récupérer les photos et mettre le logiciel à jour.',
+                en: 'I use FlashGBX to manage the cartridge, retrieve photographs and update the software.',
             },
         ],
         photos: [
@@ -163,11 +179,11 @@ const sections: Section[] = [
     },
     {
         id: 'screen',
-        title: { fr: 'L\u2019écran', en: 'The screen' },
+        title: { fr: 'Voir ce que je photographie', en: 'Seeing what I’m shooting' },
         text: [
             {
-                fr: "L'écran d'origine est sombre, surtout en concert. Un écran LCD rétroéclairé le remplace pour cadrer plus facilement.",
-                en: 'The original screen is dark, especially at concerts. A backlit LCD replaces it to make framing easier.',
+                fr: "L’écran d’origine peut être difficile à utiliser, surtout dans les salles de concert sombres. Un écran LCD rétroéclairé facilite le cadrage et me permet de continuer à photographier quand la lumière manque.",
+                en: 'The original Game Boy screen can be difficult to use, especially in dark concert venues. A backlit LCD makes framing much easier and lets me keep shooting in low-light conditions.',
             },
         ],
         photos: [
@@ -182,11 +198,19 @@ const sections: Section[] = [
     },
     {
         id: 'transfer',
-        title: { fr: 'Récupérer les photos', en: 'Getting the photos out' },
+        title: { fr: 'Faire sortir les images', en: 'Getting the pictures out' },
         text: [
             {
-                fr: "Deux projets open source permettent à la Game Boy de dialoguer avec un ordinateur et de récupérer les photos numériquement : le TinyGB Printer et le Pico GB Printer. Ils imitent la Game Boy Printer. Le câble link, avec ses extensions pour les grosses Game Boy, relie le tout.",
-                en: 'Two open source projects let the Game Boy talk to a computer and retrieve the photos digitally: the TinyGB Printer and the Pico GB Printer. Both emulate the Game Boy Printer. The link cable, with its extensions for the bulkier Game Boys, connects everything.',
+                fr: 'Récupérer les photos de la Game Boy fait aussi partie du processus.',
+                en: 'Getting the photographs off the Game Boy is part of the process too.',
+            },
+            {
+                fr: 'Des projets comme TinyGB Printer et Pico GB Printer permettent de transférer les images numériquement en émulant l’imprimante Game Boy d’origine. Avec un câble link et FlashGBX, ils ouvrent la voie vers un flux de travail numérique actuel.',
+                en: 'Projects such as TinyGB Printer and Pico GB Printer provide ways to transfer images digitally by emulating the original Game Boy Printer. Combined with a link cable and FlashGBX, they make it possible to bring these tiny images into a modern digital workflow.',
+            },
+            {
+                fr: 'Il reste toujours un peu de bricolage : tous les essais ne fonctionnent pas du premier coup.',
+                en: 'There is still some tinkering involved. Not every experiment works on the first try.',
             },
         ],
         photos: [
@@ -217,11 +241,11 @@ const sections: Section[] = [
     },
     {
         id: 'community',
-        title: { fr: 'La communauté', en: 'The community' },
+        title: { fr: 'Un projet nourri par le partage', en: 'Built on shared knowledge' },
         text: [
             {
-                fr: "Tout cela se construit en bonne partie sur des serveurs Discord et des dépôts partagés. Deux communautés m'ont particulièrement aidé.",
-                en: 'Much of this is built on Discord servers and shared repositories. Two communities helped me in particular.',
+                fr: 'Une grande partie de cette aventure n’existerait pas sans celles et ceux qui partagent leur travail, leur documentation et leurs découvertes.',
+                en: 'Very little of this would exist without the people who share their work, documentation and discoveries.',
             },
         ],
         photos: [
@@ -242,6 +266,34 @@ const sections: Section[] = [
                 desc: { fr: 'Communauté francophone de bidouilleurs de consoles rétro.', en: 'French-speaking community of retro console tinkerers.' },
             },
         ],
+        acknowledgements: [
+            {
+                name: 'Raphaël Boichot',
+                text: {
+                    fr: 'Un merci tout particulier à Raphaël Boichot, dont les projets et la documentation m’ont fait découvrir le modding de la Game Boy Camera. Son travail m’a permis de monter mon propre appareil et d’explorer bien plus loin que je n’aurais pu le faire seul.',
+                    en: 'A special thank you to Raphaël Boichot, whose projects and documentation introduced me to Game Boy Camera modding. His work made it possible for me to build my own setup and explore much further than I could have on my own.',
+                },
+                link: {
+                    label: 'Awesome Game Boy Camera and Game Boy Printer projects',
+                    url: 'https://github.com/Raphael-Boichot/Awesome-Game-Boy-Camera-and-Game-Boy-Printer-projects',
+                },
+            },
+            {
+                name: 'untoxa',
+                text: {
+                    fr: 'Merci aussi à untoxa pour Photo!, le logiciel homebrew devenu indispensable dans mon appareil.',
+                    en: 'Thanks also to untoxa for Photo!, the homebrew software that has become an essential part of my camera.',
+                },
+                link: {
+                    label: 'github.com/untoxa',
+                    url: 'https://github.com/untoxa',
+                },
+            },
+        ],
+        closingThanks: {
+            fr: 'Enfin, merci à toutes celles et ceux des communautés Game Boy Camera et du modding rétro. Cette aventure rappelle tout ce que le partage de nos créations peut rendre possible.',
+            en: 'And finally, thanks to everyone in the Game Boy Camera and retro modding communities. This whole adventure is a good reminder of what can happen when people share what they make.',
+        },
     },
 ];
 
@@ -264,7 +316,6 @@ function ExtLink({ item, lang }: { item: LinkItem; lang: 'fr' | 'en' }) {
 export default function ApparatusPage() {
     const t = useT();
     const { language } = useLanguage();
-    const fr = language === 'fr';
 
     return (
         <div className="bg-warm-white min-h-screen">
@@ -313,62 +364,33 @@ export default function ApparatusPage() {
                             ))}
                         </ul>
                     )}
+                    {section.acknowledgements && (
+                        <div className="mt-10 max-w-3xl space-y-8">
+                            {section.acknowledgements.map((acknowledgement) => (
+                                <article key={acknowledgement.name}>
+                                    <h3 className="text-xl font-semibold text-charcoal mb-3">{acknowledgement.name}</h3>
+                                    <p className="text-lg text-charcoal/80 leading-relaxed mb-4">
+                                        {acknowledgement.text[language]}
+                                    </p>
+                                    <a
+                                        href={acknowledgement.link.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="font-medium text-charcoal underline hover:text-charcoal/60"
+                                    >
+                                        {acknowledgement.link.label} →
+                                    </a>
+                                </article>
+                            ))}
+                        </div>
+                    )}
+                    {section.closingThanks && (
+                        <p className="mt-8 max-w-3xl text-lg text-charcoal/80 leading-relaxed">
+                            {section.closingThanks[language]}
+                        </p>
+                    )}
                 </section>
             ))}
-
-            <section className="max-w-3xl xl:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-charcoal/10">
-                <h2 className="text-3xl font-bold text-charcoal tracking-tight mb-6">
-                    {fr ? 'Merci Raphaël Boichot' : 'Thank you, Raphaël Boichot'}
-                </h2>
-                <p className="text-lg text-charcoal/80 leading-relaxed mb-4">
-                    {fr
-                        ? "Un grand merci à Raphaël Boichot pour son travail de documentation, ses développements autour de la Game Boy Camera et sa disponibilité. Ses projets open source m'ont permis de découvrir cet univers, de bricoler mon propre matériel et d'explorer de nouvelles possibilités photographiques. Sans ses contributions et ses conseils, cette aventure aurait certainement pris un tout autre chemin."
-                        : 'A big thank you to Raphaël Boichot for his documentation work, his developments around the Game Boy Camera and his availability. His open source projects let me discover this world, tinker with my own hardware and explore new photographic possibilities. Without his contributions and advice, this adventure would certainly have taken a very different path.'}
-                </p>
-                <a
-                    href="https://github.com/Raphael-Boichot/Awesome-Game-Boy-Camera-and-Game-Boy-Printer-projects"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-medium text-charcoal underline hover:text-charcoal/60"
-                >
-                    Awesome Game Boy Camera and Game Boy Printer projects →
-                </a>
-            </section>
-
-            <section className="max-w-3xl xl:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-charcoal/10">
-                <h2 className="text-3xl font-bold text-charcoal tracking-tight mb-6">
-                    {fr ? 'Merci untoxa' : 'Thank you, untoxa'}
-                </h2>
-                <p className="text-lg text-charcoal/80 leading-relaxed mb-4">
-                    {fr
-                        ? "Un grand merci à untoxa pour Photo!, le homebrew qui fait tourner mon appareil, et pour le Pico GB Printer, qui permet de récupérer les photos numériquement. Deux projets open source qui changent complètement l'expérience de la Game Boy Camera."
-                        : 'A big thank you to untoxa for Photo!, the homebrew that runs my camera, and for the Pico GB Printer, which lets me retrieve photos digitally. Two open source projects that completely change the Game Boy Camera experience.'}
-                </p>
-                <a
-                    href="https://github.com/untoxa"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-medium text-charcoal underline hover:text-charcoal/60"
-                >
-                    github.com/untoxa →
-                </a>
-            </section>
-
-            <section className="max-w-3xl xl:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-charcoal/10">
-                <h2 className="text-3xl font-bold text-charcoal tracking-tight mb-6">
-                    {fr ? 'Merci à la communauté' : 'Thank you to the community'}
-                </h2>
-                <p className="text-lg text-charcoal/80 leading-relaxed mb-6">
-                    {fr
-                        ? "Merci à toutes celles et ceux qui font vivre la communauté Game Boy Camera : ils partagent leurs projets, leur temps et leurs conseils, et rendent tout cela possible."
-                        : 'Thank you to everyone who keeps the Game Boy Camera community alive: they share their projects, their time and their advice, and make all of this possible.'}
-                </p>
-                <ul className="grid sm:grid-cols-2 gap-4">
-                    {sections
-                        .find((s) => s.id === 'community')
-                        ?.links?.map((l) => <ExtLink key={l.url} item={l} lang={language} />)}
-                </ul>
-            </section>
 
             <section className="bg-charcoal text-warm-white py-16 md:py-24">
                 <div className="max-w-3xl xl:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

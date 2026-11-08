@@ -172,7 +172,7 @@ export const translations = {
     equipment: {
       title: 'The Apparatus',
       subtitle: 'A Game Boy Camera Reimagined',
-      description: 'My photographic tool is a custom Game Boy Camera configuration, built on the original Mitsubishi M64282FP sensor and on hardware and software developments from the Game Boy community.',
+      description: 'This is the setup I use to make photographs with a Game Boy Camera: small adaptations, experiments, and a fair amount of tinkering along the way.',
       configurationTitle: 'Configuration',
       sensor: 'Sensor',
       sensorDesc: 'Original Game Boy Camera sensor, preserved.',
@@ -193,7 +193,7 @@ export const translations = {
       creditsTitle: 'Community Projects & Credits',
       creditsNote: 'These projects represent significant contributions to the Game Boy Camera community. Pierre Banwarth uses this configuration as a photographic tool and does not claim authorship of these developments.',
       backToWorkTitle: 'The Photographs',
-      backToWorkText: 'The technique matters because it shapes how we see. But what remains are the photographs themselves.',
+      backToWorkText: 'The hardware is only one part of the story. All these modifications are ultimately there for one reason: to make photographs.',
       credits: [
         { name: 'Photo!', role: 'Homebrew software', url: 'https://github.com/untoxa/gb-photo' },
         { name: 'GB Mini Flashable Camera', role: 'Design and documentation', url: 'https://github.com/Raphael-Boichot/Game_Boy_Mini_Flashable_Camera' },
@@ -230,7 +230,7 @@ export const translations = {
     // Homepage
     home: {
       title: 'Photographier autrement.',
-      description: 'Je suis musicien depuis de nombreuses années et j\'aime expérimenter à la croisée de la musique, de la technique et de l\'image. Avec une Game Boy Camera, j\'explore une autre manière de photographier et de transformer les images, du mouvement au tirage physique.',
+      description: 'Je suis musicien et j\'explore depuis longtemps la musique traditionnelle irlandaise. J\'aime expérimenter à la croisée de la musique, de la technique et de l\'image. Avec une Game Boy Camera, j\'explore une autre manière de photographier les concerts et de transformer les images, du mouvement au tirage physique.',
       liveVideos: 'Vidéos en direct',
       liveVideosDesc: 'L\'image en mouvement : une expérience centrée sur le mouvement, les séquences et la perception de l\'instant.',
       viewGallery: 'Voir la galerie →',
@@ -388,7 +388,7 @@ export const translations = {
     equipment: {
       title: 'L\'Appareil',
       subtitle: 'Une Game Boy Camera réinventée',
-      description: 'Mon outil photographique est une configuration custom de Game Boy Camera, reposant sur le capteur d\'origine Mitsubishi M64282FP et sur des développements matériels et logiciels issus de la communauté Game Boy.',
+      description: 'Voici la configuration que j\'utilise pour photographier avec une Game Boy Camera : quelques adaptations, des essais et pas mal de bricolage au fil du temps.',
       configurationTitle: 'Configuration utilisée',
       sensor: 'Capteur',
       sensorDesc: 'Capteur d\'origine de la Game Boy Camera, préservé.',
@@ -399,40 +399,4 @@ export const translations = {
       housing: 'Boîtier',
       housingDesc: 'Camera + Mini shell, imprimé en 3D.',
       optics: 'Optique',
-      opticsDesc: 'Objectif CS 2,8–12 mm.',
-      transferTitle: 'Écosystème de transfert',
-      transferDesc: 'Des solutions comme le TinyGB Printer, le Pico GB Printer et le GBxCart sont présentées comme des outils de l\'écosystème, et non comme des équipements personnels confirmés.',
-      capabilitiesTitle: 'Ce que cette configuration permet',
-      capabilitiesText: 'Photo! étend les possibilités de la Game Boy Camera originale : paramètres de capture plus accessibles, modes de prise de vue, réglages manuels, stockage et possibilités de transfert adaptées au matériel compatible. Le capteur reste celui de la Game Boy Camera d\'origine. La personnalisation se situe notamment dans l\'électronique de la cartouche, le logiciel, le boîtier et l\'optique. La monture CS et l\'objectif 2,8–12 mm participent à la réappropriation de l\'appareil comme outil photographique, en ouvrant des possibilités de cadrage et de mise au point différentes de la configuration d\'origine.',
-      philosophyTitle: 'Une approche artistique',
-      philosophyText: 'Je ne présente pas cette configuration comme objectivement la meilleure, ni comme une invention personnelle. Je la présente comme mon choix d\'outil photographique, construit à partir de projets ouverts et communautaires. L\'intérêt artistique réside dans ce que je fais de cet outil : les cadrages, les lumières, les compositions, les séquences animées et les images que je choisis de transformer en impressions. La technique éclaire le regard photographique : elle ne le remplace jamais.',
-      creditsTitle: 'Projets communautaires et contributeurs',
-      creditsNote: 'Ces projets représentent une contribution significative à la communauté de la Game Boy Camera. Pierre Banwarth utilise cette configuration comme outil photographique et ne revendique pas la paternité de ces développements.',
-      backToWorkTitle: 'Les photographies',
-      backToWorkText: 'La technique compte parce qu\'elle façonne notre regard. Mais ce qui demeure, ce sont les photographies elles-mêmes.',
-      credits: [
-        { name: 'Photo!', role: 'Logiciel homebrew', url: 'https://github.com/untoxa/gb-photo' },
-        { name: 'GB Mini Flashable Camera', role: 'Conception et documentation', url: 'https://github.com/Raphael-Boichot/Game_Boy_Mini_Flashable_Camera' },
-        { name: 'Camera + Mini Shell', role: 'Boîtier imprimé en 3D', url: 'https://ko-fi.com/s/a4d7bd649a' },
-        { name: 'TinyGB Printer', role: 'Écosystème d\'impression', url: 'https://github.com/Raphael-Boichot/The-TinyGB-Printer' },
-        { name: 'Pico GB Printer', role: 'Écosystème d\'impression', url: 'https://github.com/untoxa/pico-gb-printer' },
-        { name: 'GBxCart', role: 'Outil de flashage recommandé', url: 'https://www.gbxcart.com/' },
-      ],
-      learnMore: 'Explorez les projets →',
-    },
-    // Footer
-    footer: {
-      contact: 'Contact',
-      contactDesc: 'Pour les collaborations, les expositions ou les demandes de renseignements :',
-      follow: 'Suivre',
-      instagram: 'Instagram →',
-      info: 'Info',
-      photography: 'Photographies Game Boy Camera',
-      cyanotypes: 'Tirages cyanotypes :',
-      copyright: '© {year} Pierre Banwarth',
-      siteDesign: 'Conception et développement du site',
-    },
-  },
-} as const;
-
-export type TranslationKey = keyof typeof translations.en;
+      opticsDesc: 'Objectif CS 2,8–
