@@ -1,9 +1,9 @@
 'use client';
 
-import Link from 'next/link';
 import { useLanguage } from '@/app/LanguageContext';
-import { useT } from '@/lib/useT';
 import { assetPath } from '@/lib/assetPath';
+import { useT } from '@/lib/useT';
+import Link from 'next/link';
 
 type Bi = { fr: string; en: string };
 
@@ -325,6 +325,29 @@ export default function ApparatusPage() {
                 <p className="text-lg text-charcoal/80 leading-relaxed max-w-3xl xl:max-w-4xl">{t('equipment.description')}</p>
             </header>
 
+            {/* ── Récit chronologique ─────────────────────────────── */}
+            <section className="max-w-3xl xl:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-charcoal/10">
+                <h2 className="text-3xl font-bold text-charcoal tracking-tight mb-8">{t('equipment.storyTitle')}</h2>
+                <div className="space-y-6 text-lg text-charcoal/80 leading-relaxed">
+                    <p>{t('equipment.storyIntro')}</p>
+                    <p>{t('equipment.story1')}</p>
+
+                    <h3 className="text-2xl font-bold text-charcoal pt-6">{t('equipment.story2Title')}</h3>
+                    <p>{t('equipment.story2')}</p>
+                    <p>{t('equipment.story3')}</p>
+                    <p>{t('equipment.story4')}</p>
+
+                    <h3 className="text-2xl font-bold text-charcoal pt-6">{t('equipment.story5Title')}</h3>
+                    <p>{t('equipment.story5')}</p>
+                    <p>{t('equipment.story6')}</p>
+                    <p>{t('equipment.story7')}</p>
+
+                    <h3 className="text-2xl font-bold text-charcoal pt-6">{t('equipment.story8Title')}</h3>
+                    <p>{t('equipment.story8')}</p>
+                </div>
+            </section>
+
+            {/* ── Sections techniques illustrées ─────────────────── */}
             {sections.map((section) => (
                 <section
                     key={section.id}
@@ -341,20 +364,23 @@ export default function ApparatusPage() {
                     </div>
 
                     <div className="grid sm:grid-cols-2 gap-6">
-                        {section.photos.map((photo, i) => (
-                            <figure
-                                key={photo.file}
-                                className={section.photos.length % 2 === 1 && i === 0 ? 'sm:col-span-2' : ''}
-                            >
-                                <img
-                                    src={assetPath(`/images/appareil/${encodeURIComponent(photo.file)}`)}
-                                    alt={photo.caption[language]}
-                                    loading="lazy"
-                                    className="w-full h-auto bg-charcoal/5"
-                                />
-                                <figcaption className="mt-2 text-sm text-charcoal/70">{photo.caption[language]}</figcaption>
-                            </figure>
-                        ))}
+                        {section.photos.map((photo, i) => {
+                            const isLastOrphan =
+                                section.photos.length % 2 === 1 && i === section.photos.length - 1;
+                            return (
+                                <figure key={photo.file} className={isLastOrphan ? 'sm:col-span-2' : ''}>
+                                    <img
+                                        src={assetPath(`/images/appareil/${encodeURIComponent(photo.file)}`)}
+                                        alt={photo.caption[language]}
+                                        loading="lazy"
+                                        className="w-full h-auto bg-charcoal/5"
+                                    />
+                                    <figcaption className="mt-2 text-sm text-charcoal/70">
+                                        {photo.caption[language]}
+                                    </figcaption>
+                                </figure>
+                            );
+                        })}
                     </div>
 
                     {section.links && (
@@ -364,6 +390,7 @@ export default function ApparatusPage() {
                             ))}
                         </ul>
                     )}
+
                     {section.acknowledgements && (
                         <div className="mt-10 max-w-3xl space-y-8">
                             {section.acknowledgements.map((acknowledgement) => (
@@ -384,6 +411,7 @@ export default function ApparatusPage() {
                             ))}
                         </div>
                     )}
+
                     {section.closingThanks && (
                         <p className="mt-8 max-w-3xl text-lg text-charcoal/80 leading-relaxed">
                             {section.closingThanks[language]}
@@ -392,6 +420,15 @@ export default function ApparatusPage() {
                 </section>
             ))}
 
+            {/* ── Clôture narrative ───────────────────────────────── */}
+            <section className="max-w-3xl xl:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-charcoal/10">
+                <h2 className="text-3xl font-bold text-charcoal tracking-tight mb-6">
+                    {t('equipment.story9Title')}
+                </h2>
+                <p className="text-lg text-charcoal/80 leading-relaxed">{t('equipment.story9')}</p>
+            </section>
+
+            {/* ── CTA final ───────────────────────────────────────── */}
             <section className="bg-charcoal text-warm-white py-16 md:py-24">
                 <div className="max-w-3xl xl:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-2xl font-bold mb-4">{t('equipment.backToWorkTitle')}</h2>
