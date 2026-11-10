@@ -1,13 +1,12 @@
+import LanguageProviderWrapper from "@/app/LanguageProviderWrapper";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import LanguageProviderWrapper from "@/app/LanguageProviderWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -22,6 +21,9 @@ export const metadata: Metadata = {
     url: "https://pierrebanwarth.com/",
     type: "website",
     images: [{ url: "https://pierrebanwarth.com/og.png", width: 1200, height: 630 }],
+  },
+  verification: {
+    google: "GTM-KPWVNXTC",
   },
   twitter: {
     card: "summary_large_image",
