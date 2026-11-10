@@ -8,7 +8,7 @@ import Header from '@/components/Header';
 export default function AppWrapper({ children }: { children: React.ReactNode }) {
   return (
     <LanguageProvider>
-      <GoogleTagManager gtmId="GTM-KPWVNXTC" />
+      <GoogleTagManager gtmId="GTM-WZR36BZS" />
       <Header />
       <main className="flex-1">
         {children}
