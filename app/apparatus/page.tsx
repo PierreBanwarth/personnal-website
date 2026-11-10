@@ -46,18 +46,18 @@ const sections: Section[] = [
         ],
         photos: [
             {
-                file: 'les deux game boy principalement utilisée la game boy color est plus complete.jpg',
+                file: 'les deux game boy principalement utilisée la game boy color est plus complete.webp',
                 caption: {
                     fr: 'Les deux Game Boy principalement utilisées. La Game Boy Color est la plus complète.',
                     en: 'The two Game Boys used most. The Game Boy Color is the more complete one.',
                 },
             },
             {
-                file: 'le gang au complet.jpg',
+                file: 'le gang au complet.webp',
                 caption: { fr: 'Le gang au complet.', en: 'The whole gang.' },
             },
             {
-                file: 'Game boy qui bronze.jpg',
+                file: 'Game boy qui bronze.webp',
                 caption: { fr: 'Une Game Boy qui bronze.', en: 'A Game Boy getting a tan.' },
             },
         ],
@@ -73,15 +73,15 @@ const sections: Section[] = [
         ],
         photos: [
             {
-                file: "capteur et bague pour fixer l'objectif.jpg",
+                file: "capteur et bague pour fixer l'objectif.webp",
                 caption: { fr: "Le capteur et la bague pour fixer l'objectif.", en: 'The sensor and the ring that holds the lens.' },
             },
             {
-                file: 'installation du capteur originale dans une coque neuve.jpg',
+                file: 'installation du capteur originale dans une coque neuve.webp',
                 caption: { fr: "Installation du capteur d'origine dans une coque neuve.", en: 'Installing the original sensor in a new shell.' },
             },
             {
-                file: 'premiers tests avec un objectif et une coque custom.jpg',
+                file: 'premiers tests avec un objectif et une coque custom.webp',
                 caption: { fr: 'Premiers tests avec un objectif et une coque custom.', en: 'First tests with a lens and a custom shell.' },
             },
         ],
@@ -104,11 +104,11 @@ const sections: Section[] = [
         ],
         photos: [
             {
-                file: 'first_3d_print.jpg',
+                file: 'first_3d_print.webp',
                 caption: { fr: 'La première impression 3D.', en: 'The first 3D print.' },
             },
             {
-                file: "installation d'un support pour trépié sur une base imprimé en 3D par .jpg",
+                file: "installation d'un support pour trépié sur une base imprimé en 3D par .webp",
                 caption: {
                     fr: 'Installation d\u2019un support pour trépied sur une base imprimée en 3D.',
                     en: 'Installing a tripod mount on a 3D printed base.',
@@ -142,18 +142,18 @@ const sections: Section[] = [
         ],
         photos: [
             {
-                file: 'operation_a_coeur_ouvert.jpg',
+                file: 'operation_a_coeur_ouvert.webp',
                 caption: { fr: 'Opération à c\u0153ur ouvert.', en: 'Open-heart surgery.' },
             },
             {
-                file: 'premiere cartouche avec pcb custom et photos ! le homebrew installé dessus merci a raphael boichot.jpg',
+                file: 'premiere cartouche avec pcb custom et photos ! le homebrew installé dessus merci a raphael boichot.webp',
                 caption: {
                     fr: 'Première cartouche avec PCB custom, et premières photos. Le homebrew est installé dessus. Merci à Raphaël Boichot.',
                     en: 'First cartridge with the custom PCB, and first photos. The homebrew is installed on it. Thanks to Raphaël Boichot.',
                 },
             },
             {
-                file: 'flashgbx pour lire les sauvegardes exporter les photos et mettre a jour le firmware.jpg',
+                file: 'flashgbx pour lire les sauvegardes exporter les photos et mettre a jour le firmware.webp',
                 caption: {
                     fr: 'FlashGBX pour lire les sauvegardes, exporter les photos et mettre à jour le firmware.',
                     en: 'FlashGBX to read saves, export photos and update the firmware.',
@@ -188,7 +188,7 @@ const sections: Section[] = [
         ],
         photos: [
             {
-                file: "installation d'un ecran lcd rétro éclairé pour prendre des photos plus facilement en concert sinon ecran sombre.jpg",
+                file: "installation d'un ecran lcd rétro éclairé pour prendre des photos plus facilement en concert sinon ecran sombre.webp",
                 caption: {
                     fr: 'Installation d\u2019un écran LCD rétroéclairé pour prendre des photos plus facilement en concert.',
                     en: 'Installing a backlit LCD screen to shoot more easily at concerts.',
@@ -215,22 +215,22 @@ const sections: Section[] = [
         ],
         photos: [
             {
-                file: 'Cable link avec ses extensions pour grosses game boy.jpg',
+                file: 'Cable link avec ses extensions pour grosses game boy.webp',
                 caption: { fr: 'Câble link avec ses extensions pour les grosses Game Boy.', en: 'Link cable with its extensions for the bulkier Game Boys.' },
             },
             {
-                file: 'test du game boy printer.jpg',
+                file: 'test du game boy printer.webp',
                 caption: { fr: 'Test de la Game Boy Printer.', en: 'Testing the Game Boy Printer.' },
             },
             {
-                file: 'pico remote printer tentative semi réussi de soudure maison projet open source merci raphael boichot pour les pcb et le travail sur les différents projet.jpg',
+                file: 'pico remote printer tentative semi réussi de soudure maison projet open source merci raphael boichot pour les pcb et le travail sur les différents projet.webp',
                 caption: {
                     fr: 'Pico remote printer : tentative semi-réussie de soudure maison. Projet open source, merci à Raphaël Boichot pour les PCB et le travail sur les différents projets.',
                     en: 'Pico remote printer: a half-successful home soldering attempt. Open source project, thanks to Raphaël Boichot for the PCBs and his work on these projects.',
                 },
             },
             {
-                file: 'pico remote aussi .jpg',
+                file: 'pico remote aussi .webp',
                 caption: { fr: 'Le pico remote aussi.', en: 'The pico remote too.' },
             },
         ],
@@ -250,7 +250,7 @@ const sections: Section[] = [
         ],
         photos: [
             {
-                file: 'passion modding.jpg',
+                file: 'passion modding.webp',
                 caption: { fr: 'Passion modding.', en: 'Modding passion.' },
             },
         ],
